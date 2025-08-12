@@ -29,7 +29,7 @@ export const CommunitySection = () => {
   );
 
   return (
-    <section className="overflow-hidden w-full bg-white py-6">
+    <section className="overflow-hidden w-full py-6">
       {/* First row */}
       <div className="flex animate-marquee gap-6">
         {[...cryptoIcons, ...cryptoIcons].map((icon, index) => (

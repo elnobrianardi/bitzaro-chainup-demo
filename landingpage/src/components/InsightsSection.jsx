@@ -29,7 +29,7 @@ export const InsightsSection = () => {
   };
 
   return (
-    <footer className="flex w-[1440px] items-start gap-8 px-[92px] py-[42px]">
+    <footer className="flex max-w-[1200px] mx-auto items-start gap-8 px-[92px] py-[42px]">
       <div className="flex flex-col w-[336px] items-start gap-6 relative">
         <img
           className="relative w-[122px] h-6 aspect-[5.1] object-cover"
@@ -45,7 +45,7 @@ export const InsightsSection = () => {
           Kowloon, Hong Kong
         </address>
 
-        <button className="inline-flex flex-col items-center justify-center px-4 py-2 relative flex-[0_0_auto] bg-primitives-brand-primary rounded-md border border-solid border-primitives-brand-primary hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 transition-colors">
+        <button className="inline-flex flex-col items-center justify-center px-4 py-2 relative flex-[0_0_auto] bg-[#7815F9] rounded-md hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 transition-colors">
           <span className="mt-[-1.00px] [font-family:'Inter-Medium',Helvetica] font-medium text-white text-sm leading-[21px] relative w-fit text-center tracking-[0] whitespace-nowrap">
             Download Bitzaro App
           </span>

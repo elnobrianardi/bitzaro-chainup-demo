@@ -31,7 +31,7 @@ export const SafetyPrioritySection = () => {
           className="flex flex-col items-start gap-4 relative flex-1 grow"
         >
           <img
-            className="relative flex-[0_0_auto]"
+            className="relative flex-[0_0_auto] h-[58px] w-[58px]"
             alt={`${feature.title} icon`}
             src={feature.icon}
             role="img"
@@ -42,7 +42,7 @@ export const SafetyPrioritySection = () => {
               {feature.title}
             </h3>
 
-            <p className="relative self-stretch [font-family:'Roboto-Regular',Helvetica] font-normal text-black text-xl tracking-[0] leading-[30px]">
+            <p className="text-left relative self-stretch [font-family:'Roboto-Regular',Helvetica] font-normal text-black text-xl tracking-[0] leading-[30px]">
               {feature.description}
             </p>
           </div>

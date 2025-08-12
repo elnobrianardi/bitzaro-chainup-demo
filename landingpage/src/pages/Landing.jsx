@@ -17,80 +17,100 @@ import Dashboard from "../assets/Dashboard_Screen_Capture/Dashboard.png";
 
 export const Landing = () => {
   return (
-    <div className="bg-white max-w-[1200px] flex flex-col items-center text-black">
-      {/* Global paddings and spacing applied here */}
-
-      {/* Header */}
+    <div className="min-h-screen w-full bg-white text-black">
       <HeaderSection />
 
-      {/* Hero Section */}
-      <section className="w-full text-center py-16 px-4">
+      {/* Hero Section - full width */}
+      <section className="w-full">
         <IntroductionSection />
-        <h2 className="text-5xl font-extrabold mt-8">
+      </section>
+
+      {/* One App Heading */}
+      <section className="max-w-[1200px] mx-auto text-center pt-16">
+        <h2 className="text-5xl font-extrabold">
           One App, Endless Possibilities
         </h2>
       </section>
 
       {/* Trading Experience */}
-      <section className="text-center py-16 px-4 grid grid-cols-2">
-        <ContentWrapperSection />
-        <MainContentSection />
-        
-        <FeaturesSection />
-        <ComponentNodeSection />
-        <AppOverviewSection />
-        
+      <section className="w-full">
+        <div className="max-w-[1200px] mx-auto w-full py-16 grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+          <ContentWrapperSection />
+          <MainContentSection />
+          <div className="flex gap-8">
+            <div className="flex flex-col gap-8">
+              <FeaturesSection />
+              <AppOverviewSection />
+            </div>
+            <div>
+              <ComponentNodeSection />
+            </div>
+          </div>
+        </div>
       </section>
 
-<section>
-     <h2 className="text-5xl font-extrabold">
-          The Ultimate Web Trading Experience
-        </h2>
-        <p className="text-2xl text-gray-800 mt-4">
-          Enjoy Bitzaro right from your desktop
-        </p>
-        <button className="mt-6 px-8 py-4 bg-primitives-brand-primary text-white font-semibold rounded-md">
-          Launch on Desktop
-        </button>
+      {/* Ultimate Web Trading Experience */}
+      <section className="w-full">
+        <div className="max-w-[1200px] mx-auto text-center pb-16 px-4">
+          <h2 className="text-5xl font-extrabold">
+            The Ultimate Web <br /> Trading Experience
+          </h2>
+          <p className="text-2xl text-gray-800 mt-4">
+            Enjoy Bitzaro right from your desktop
+          </p>
+          <button className="mt-6 px-8 py-4 bg-[#7815F9] text-white font-semibold rounded-md">
+            Launch on Desktop
+          </button>
+          <img
+            src={Dashboard}
+            alt="Dashboard"
+            className="max-w-5xl w-full mt-8 rounded-lg shadow-lg mx-auto"
+          />
+        </div>
+      </section>
 
-        <img
-          src={Dashboard}
-          alt="Dashboard"
-          className="max-w-5xl w-full mt-8 rounded-lg shadow-lg"
-        />
-</section>
-      {/* Community */}
-      <section className="w-full py-16 px-4 bg-gray-50">
-        <CommunitySection />
+      {/* Community Section - background */}
+      <section className="w-full bg-gray-150">
+        <div className="mx-auto py-16 px-4">
+          <CommunitySection />
+        </div>
       </section>
 
       {/* Bitcoin Investment */}
-      <section className="w-full text-center py-16 px-4">
-        <h2 className="text-5xl font-extrabold">
-          If you'd invested in <span className="underline">Bitcoin</span>
-        </h2>
-        <BitcoinInvestmentSection />
+      <section className="w-full">
+        <div className="max-w-[1200px] mx-auto text-center py-16 px-4">
+          <h2 className="text-5xl font-extrabold pb-16 text-left">
+            If you'd invested in <span className="underline">Bitcoin</span> <span className="text-light">v</span>
+          </h2>
+          <BitcoinInvestmentSection />
+          <p className="text-sm text-gray-500 mt-4">
+            Based on data from 1 March 2020 - 1 March 2024. Past performances do
+            not guarantee the future.
+          </p>
+        </div>
       </section>
 
       {/* Safety & Investment */}
-      <section className="w-full text-center py-16 px-4">
-        <h2 className="text-5xl text-black font-extrabold mt-12">
-          Your Safety, Our Priority
-        </h2>
-        <InvestmentInfoSection />
-        <p className="text-sm text-gray-500 mt-4">
-          Based on data from 1 March 2020 - 1 March 2024. Past performances do
-          not guarantee the future.
-        </p>
-        <SafetyPrioritySection />
+      <section className="w-full">
+        <div className="max-w-[1200px] mx-auto text-center py-16 px-4">
+          <h2 className="text-5xl font-extrabold mt-12">
+            Your Safety, Our Priority
+          </h2>
+          <InvestmentInfoSection />
+          <SafetyPrioritySection />
+        </div>
       </section>
 
-      {/* Crypto Insights */}
-      <section className="w-full text-center py-16 px-4 bg-gray-50">
-        <h2 className="text-5xl font-extrabold">Crypto Latest Insights</h2>
-        <CryptoInsightsSection />
-        <TradingExperienceSection />
-        <InsightsSection />
+      {/* Crypto Insights - background */}
+      <section className="w-full bg-gray-50">
+        <div className="max-w-[1200px] mx-auto text-center py-16 px-4">
+          <h2 className="text-5xl font-extrabold mb-16 text-left">Crypto Latest Insights</h2>
+          <CryptoInsightsSection />
+        </div>
+        <div className="w-full max-auto text-center">
+          <TradingExperienceSection />
+          <InsightsSection />
+        </div>
       </section>
     </div>
   );

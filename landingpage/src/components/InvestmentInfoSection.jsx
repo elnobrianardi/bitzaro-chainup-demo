@@ -22,7 +22,7 @@ export const InvestmentInfoSection = () => {
 
   return (
     <section
-      className="flex w-[1178px] items-center gap-[62px]"
+      className="flex w-[1178px] items-center gap-[62px] my-8"
       role="region"
       aria-labelledby="investment-info-heading"
     >
@@ -41,7 +41,7 @@ export const InvestmentInfoSection = () => {
             aria-label={`${feature.title} icon`}
           >
             <img
-              className="w-[42px] h-[42px]"
+              className="w-[58px] h-[58px]"
               src={feature.icon}
               alt={`${feature.title} icon`}
             />
@@ -51,7 +51,7 @@ export const InvestmentInfoSection = () => {
             <h3 className="relative w-fit mt-[-1.00px] [font-family:'Roboto-SemiBold',Helvetica] font-semibold text-[#1b1b1b] text-2xl tracking-[0] leading-[30px] whitespace-nowrap">
               {feature.title}
             </h3>
-            <p className="self-stretch [font-family:'Roboto-Regular',Helvetica] font-normal text-black text-xl leading-[30px] relative tracking-[0]">
+            <p className="text-left self-stretch [font-family:'Roboto-Regular',Helvetica] font-normal text-black text-xl leading-[30px] relative tracking-[0]">
               {feature.description}
             </p>
           </div>

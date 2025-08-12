@@ -78,111 +78,90 @@ export const CryptoInsightsSection = () => {
   ];
 
   return (
-    <section className="flex w-[1180px] items-start gap-[42px]">
-      <article className="gap-5 pt-6 pb-0 px-0 relative flex-1 grow flex flex-col items-start rounded-2xl">
-        <header className="inline-flex flex-col items-start gap-2 relative flex-[0_0_auto] mr-[-44.00px]">
-          <h2 className="w-[766px] mt-[-1.00px] text-2xl leading-[30px] relative [font-family:'Roboto-Medium',Helvetica] font-medium text-black tracking-[0]">
-            ❘&nbsp;&nbsp;Bitzaro Academy
+    <section className="flex flex-col lg:flex-row items-stretch gap-8">
+      {/* Academy */}
+      <article className="flex flex-col gap-5 p-6 flex-[2.75] ">
+        <header className="flex flex-col gap-2">
+          <h2 className="text-left text-2xl font-medium text-black mb-2">
+            ❘ Bitzaro Academy
           </h2>
-
-          <p className="[font-family:'Roboto-Regular',Helvetica] font-normal text-[#323232] text-xl leading-[30px] relative w-fit tracking-[0] whitespace-nowrap">
+          <p className="text-[#323232] text-xl text-left">
             Discover the easiest way to learn crypto.
           </p>
         </header>
 
-        <div className="flex flex-col items-start gap-6 relative self-stretch w-full flex-[0_0_auto]">
-          <div className="flex items-start gap-6 relative self-stretch w-full flex-[0_0_auto]">
-            {academyArticles.slice(0, 3).map((article) => (
-              <article
-                key={article.id}
-                className="flex flex-col items-center justify-center relative flex-1 grow bg-[#f6f7f8] rounded-lg"
-              >
-                <img
-                  className="relative self-stretch w-full aspect-[1.59]"
-                  alt={article.alt}
-                  src={article.image}
-                />
-
-                <div className="flex items-center justify-center gap-2.5 p-2 relative self-stretch w-full flex-[0_0_auto]">
-                  <h3 className="relative flex-1 mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium text-[#1b1b1b] text-lg tracking-[0] leading-[22.5px] overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical]">
-                    {article.title}
-                  </h3>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="flex items-start gap-6 relative self-stretch w-full flex-[0_0_auto]">
-            {academyArticles.slice(3, 6).map((article) => (
-              <article
-                key={article.id}
-                className="flex flex-col items-center justify-center relative flex-1 grow bg-[#f6f7f8] rounded-lg"
-              >
-                <img
-                  className="relative self-stretch w-full aspect-[1.59]"
-                  alt={article.alt}
-                  src={article.image}
-                />
-
-                <div className="flex items-center justify-center gap-2.5 p-2 relative self-stretch w-full flex-[0_0_auto]">
-                  <h3 className="relative flex-1 mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium text-[#1b1b1b] text-lg tracking-[0] leading-[22.5px] overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical]">
-                    {article.title}
-                  </h3>
-                </div>
-              </article>
-            ))}
-          </div>
+        <div className="flex flex-col gap-6 w-full">
+          {[0, 1].map((row) => (
+            <div key={row} className="flex gap-6 w-full">
+              {academyArticles.slice(row * 3, row * 3 + 3).map((article) => (
+                <article
+                  key={article.id}
+                  className="flex flex-col flex-1 bg-[#f6f7f8] rounded-lg overflow-hidden"
+                >
+                  <img
+                    className="w-full aspect-[1.59] object-cover"
+                    alt={article.alt}
+                    src={article.image}
+                  />
+                  <div className="p-2">
+                    <h3 className="font-medium text-[#1b1b1b] text-lg leading-[22.5px] line-clamp-2">
+                      {article.title}
+                    </h3>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ))}
         </div>
 
-        <footer className="items-center gap-1 self-stretch w-full flex-[0_0_auto] flex relative">
+        <footer className="flex items-center gap-1">
           <a
             href="#"
-            className="mt-[-1.00px] [font-family:'Inter-Medium',Helvetica] font-medium text-[#7815f9] text-base text-right leading-6 overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] relative w-fit tracking-[0] whitespace-nowrap"
+            className="font-medium text-[#7815f9] text-base whitespace-nowrap"
           >
             Explore Bitzaro Academy
           </a>
-
-          <div className="relative w-6 h-6 bg-[url(/chevron-forward.png)] bg-[100%_100%]" />
+          <div className="w-6 h-6 bg-[url(/chevron-forward.png)] bg-contain bg-no-repeat" />
         </footer>
       </article>
 
-      <aside className="flex-col w-[416px] items-start gap-7 p-6 rounded-2xl border border-solid border-[#dcdcdc] flex relative">
-        <header className="inline-flex flex-col items-start gap-2 relative flex-[0_0_auto] mr-[-22.00px]">
-          <h2 className="w-[390px] mt-[-1.00px] text-2xl leading-[30px] relative [font-family:'Roboto-Medium',Helvetica] font-medium text-black tracking-[0]">
-            ❘&nbsp;&nbsp;Bitzaro News
-          </h2>
-
-          <p className="[font-family:'Roboto-Regular',Helvetica] font-normal text-[#323232] text-xl leading-[30px] relative w-fit tracking-[0] whitespace-nowrap">
+      {/* News */}
+      <aside className="flex flex-col gap-7 p-6 flex-[1.25] rounded-2xl border border-[#dcdcdc] bg-white">
+        <header className="flex flex-col gap-2">
+          <h2 className="text-2xl font-medium text-black">❘ Bitzaro News</h2>
+          <p className="text-[#323232] text-xl">
             Get the latest crypto update.
           </p>
         </header>
 
-        <nav className="flex flex-col items-start gap-5 relative self-stretch w-full flex-[0_0_auto]">
+        <nav className="flex flex-col">
           {newsItems.map((item, index) => (
             <React.Fragment key={item.id}>
-              <article className="flex items-center gap-4 relative self-stretch w-full flex-[0_0_auto]">
-                <div className="relative w-[26px] [font-family:'Inter-ExtraBold',Helvetica] font-extrabold text-[#dde1e7] text-[32px] text-center tracking-[0] leading-10">
+              <article className="flex items-center gap-4 py-4">
+                <div className="w-[26px] font-extrabold text-[#dde1e7] text-[32px] text-center">
                   {item.id}
                 </div>
-
-                <h3 className="relative flex-1 mt-[-1.00px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-[#1b1b1b] text-base tracking-[0] leading-6 overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical]">
+                <h3 className="flex-1 font-semibold text-[#1b1b1b] text-base leading-6 line-clamp-2">
                   {item.title}
                 </h3>
               </article>
 
+              {/* Dotted underline except for last item */}
+              {index < newsItems.length - 1 && (
+                <div className="border-t-2 border-dotted border-[#dcdcdc] my-2"></div>
+              )}
             </React.Fragment>
           ))}
         </nav>
 
-        <footer className="items-center gap-1 self-stretch w-full flex-[0_0_auto] flex relative">
+        <footer className="flex items-center gap-1">
           <a
             href="#"
-            className="mt-[-1.00px] [font-family:'Inter-Medium',Helvetica] font-medium text-[#7815f9] text-base text-right leading-6 overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] relative w-fit tracking-[0] whitespace-nowrap"
+            className="font-medium text-[#7815f9] text-base whitespace-nowrap"
           >
             Read More on Bitzaro News
           </a>
-
-          <div className="relative w-6 h-6 bg-[url(/chevron-forward-2.png)] bg-[100%_100%]" />
+          <div className="w-6 h-6 bg-[url(/chevron-forward-2.png)] bg-contain bg-no-repeat" />
         </footer>
       </aside>
     </section>

@@ -5,6 +5,7 @@ import VrTrading212 from "../assets/Latest_Insight/26234205_vr_trading_21.png";
 import VrTrading21 from "../assets/Latest_Insight/26234205_vr_trading_22.png";
 import defi12 from "../assets/Latest_Insight/defi2.png";
 import defi1 from "../assets/Latest_Insight/defi1.png";
+import purpleArrow from '../assets/Icon/Arrow/Vector.png'
 
 export const CryptoInsightsSection = () => {
   const academyArticles = [
@@ -78,7 +79,7 @@ export const CryptoInsightsSection = () => {
   ];
 
   return (
-    <section className="flex flex-col lg:flex-row items-stretch gap-8">
+    <section className="flex flex-col lg:flex-row items-stretch gap-8 text-left">
       {/* Academy */}
       <article className="flex flex-col gap-5 p-6 flex-[2.75] ">
         <header className="flex flex-col gap-2">
@@ -121,6 +122,9 @@ export const CryptoInsightsSection = () => {
           >
             Explore Bitzaro Academy
           </a>
+          <div>
+            <img src={purpleArrow} className="w-3 h-4 ml-2" alt="" />
+          </div>
           <div className="w-6 h-6 bg-[url(/chevron-forward.png)] bg-contain bg-no-repeat" />
         </footer>
       </article>
@@ -161,6 +165,9 @@ export const CryptoInsightsSection = () => {
           >
             Read More on Bitzaro News
           </a>
+          <div>
+            <img src={purpleArrow} className="w-3 h-4 ml-2" alt="" />
+          </div>
           <div className="w-6 h-6 bg-[url(/chevron-forward-2.png)] bg-contain bg-no-repeat" />
         </footer>
       </aside>

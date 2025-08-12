@@ -37,7 +37,7 @@ export const InsightsSection = () => {
           src={bitzaroLogoBlack}
         />
 
-        <address className="relative w-fit [font-family:'Inter-Medium',Helvetica] font-medium text-[#5c5c5c] text-sm tracking-[0] leading-[21px] not-italic">
+        <address className="text-left relative w-fit [font-family:'Inter-Medium',Helvetica] font-medium text-[#5c5c5c] text-sm tracking-[0] leading-[21px] not-italic">
           Room 1046, 14/F, Solo Building
           <br />
           41–43 Carnarvon Road, Tsim Sha Tsui

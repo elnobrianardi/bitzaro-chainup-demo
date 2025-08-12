@@ -7,12 +7,13 @@ import { ContentWrapperSection } from "../components/ContentWrapperSection";
 import { CryptoInsightsSection } from "../components/CryptoInsightsSection";
 import { FeaturesSection } from "../components/FeaturesSection";
 import { HeaderSection } from "../components/HeaderSection";
-import { InsightsSection } from "../components/InsightsSection";
+import { InsightsSection } from "../components/InsightsSectionWhite";
 import { IntroductionSection } from "../components/IntroductionSection";
 import { InvestmentInfoSection } from "../components/InvestmentInfoSection";
 import { MainContentSection } from "../components/MainContentSection";
 import { SafetyPrioritySection } from "../components/SafetyPrioritySection";
 import { TradingExperienceSection } from "../components/TradingExperienceSection";
+import downArrow from "../assets/Icon/Arrow/Vector-1.png";
 import Dashboard from "../assets/Dashboard_Screen_Capture/Dashboard.png";
 
 export const Landing = () => {
@@ -26,15 +27,17 @@ export const Landing = () => {
       </section>
 
       {/* One App Heading */}
-      <section className="max-w-[1200px] mx-auto text-center pt-16">
-        <h2 className="text-5xl font-extrabold">
-          One App, Endless Possibilities
-        </h2>
+      <section className="relative w-full mx-auto text-center items-center justify-center">
+        <div className="absolute -top-8 left-1/2 -translate-x-1/2 pt-16 rounded-t-4xl w-full bg-white">
+          <h2 className="text-5xl font-extrabold">
+            One App, Endless Possibilities
+          </h2>
+        </div>
       </section>
 
       {/* Trading Experience */}
       <section className="w-full">
-        <div className="max-w-[1200px] mx-auto w-full py-16 grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+        <div className="max-w-[1200px] mx-auto w-full py-32 grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
           <ContentWrapperSection />
           <MainContentSection />
           <div className="flex gap-8">
@@ -79,9 +82,12 @@ export const Landing = () => {
       {/* Bitcoin Investment */}
       <section className="w-full">
         <div className="max-w-[1200px] mx-auto text-center py-16 px-4">
-          <h2 className="text-5xl font-extrabold pb-16 text-left">
-            If you'd invested in <span className="underline">Bitcoin</span> <span className="text-light">v</span>
-          </h2>
+          <div className="flex gap-8">
+            <h2 className="text-5xl font-extrabold pb-16 text-left">
+              If you'd invested in <span className="underline">Bitcoin</span>{" "}</h2>
+                <img src={downArrow} alt="" className="mt-8 w-6 h-4 my-4" />
+          </div>
+
           <BitcoinInvestmentSection />
           <p className="text-sm text-gray-500 mt-4">
             Based on data from 1 March 2020 - 1 March 2024. Past performances do
@@ -104,7 +110,9 @@ export const Landing = () => {
       {/* Crypto Insights - background */}
       <section className="w-full bg-gray-50">
         <div className="max-w-[1200px] mx-auto text-center py-16 px-4">
-          <h2 className="text-5xl font-extrabold mb-16 text-left">Crypto Latest Insights</h2>
+          <h2 className="text-5xl font-extrabold mb-16 text-left">
+            Crypto Latest Insights
+          </h2>
           <CryptoInsightsSection />
         </div>
         <div className="w-full max-auto text-center">

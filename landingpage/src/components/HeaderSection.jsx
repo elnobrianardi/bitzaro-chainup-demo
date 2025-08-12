@@ -9,14 +9,16 @@ export const HeaderSection = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setScrolled(scrollTop > window.innerHeight); // more than 100vh
-    };
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const triggerHeight = 200; 
+    setScrolled(scrollTop > triggerHeight);
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
 
   const navigationItems = [
     { label: "Market", href: "/market" },
@@ -34,7 +36,7 @@ export const HeaderSection = () => {
         {/* Left group */}
         <div className="inline-flex items-end gap-9">
           <Link
-            to="/landing"
+            to="/"
             className={`focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 rounded ${
               scrolled
                 ? "focus:ring-offset-white"
@@ -43,7 +45,7 @@ export const HeaderSection = () => {
             aria-label="Bitzaro Home"
           >
             <img
-              className="w-[122px] h-6 aspect-[5.1] object-cover"
+              className="h-10 object-contain"
               alt="Bitzaro logo"
               src={scrolled ? bitzaroLogoBlack : bitzaroLogoWhite}
             />

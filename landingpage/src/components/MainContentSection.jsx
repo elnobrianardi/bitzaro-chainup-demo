@@ -1,5 +1,6 @@
 import React from "react";
 import spot1 from "../assets/GIF/6dd8b16727dce17a403312ece351459126ba8c1a.gif";
+import arrow from '../assets/Icon/Navigation_Icon_(Profile, Language, Arrow)/arrow_right_alt.png'
 
 export const MainContentSection = () => {
   return (
@@ -9,13 +10,13 @@ export const MainContentSection = () => {
         className="absolute top-8 right-8 inline-flex items-center gap-2.5 p-2 bg-white rounded-[50px] overflow-hidden hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#53199e] focus:ring-opacity-50"
         aria-label="Learn more about advanced trading"
       >
-        ⟶
+        <img src={arrow} className='w-6 h-6' alt="" />
       </button>
 
       {/* Text content */}
-      <div className="flex flex-col items-start gap-4 w-full">
+      <div className="flex flex-col items-start gap-4 w-full mb-8">
         <h3 className="relative w-fit mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium text-[#53199e] text-xl tracking-[0] leading-[25px] whitespace-nowrap">
-          ❘ Advanced&nbsp;&nbsp;Trading
+          ❘ Advanced Trading
         </h3>
 
         <h2 className="relative w-full [font-family:'Roboto-Medium',Helvetica] font-medium text-[#323232] text-[32px] tracking-[0] leading-10">

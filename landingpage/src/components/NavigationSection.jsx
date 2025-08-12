@@ -1,68 +1,86 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import bitzaroLogoWhite from "../assets/Logo/BitzaroLogoWhite.png";
+import languageWhite from "../assets/Icon/mynaui_globe-1.png";
 
 export const NavigationSection = () => {
   const navigationItems = [
-    { label: "Marketplace", href: "#marketplace" },
-    { label: "Trade", href: "#trade" },
-    { label: "Learn", href: "#learn" },
+    { label: "Market", href: "/market" },
+    { label: "Trade", href: "/trade" },
+    { label: "Learn", href: "/learn" },
   ];
 
   return (
-    <nav
-      className="max-w-[1200px] justify-between px-[92px] py-4 fixed top-0 left-0 bg-[#ffffffb2] border-b [border-bottom-style:solid] border-[#eff4f9] backdrop-blur-[6px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(6px)_brightness(100%)] flex items-center z-50"
-      role="navigation"
-      aria-label="Main navigation"
+    <header
+      className="fixed top-0 left-0 w-full bg-[#16121f] backdrop-blur-[5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(5px)_brightness(100%)] flex items-center z-50 py-4"
     >
-      <div className="inline-flex items-end gap-9 relative flex-[0_0_auto]">
-        <a href="/" aria-label="Bitzaro home">
-          <img
-            className="relative w-[122px] h-6 aspect-[5.1] object-cover"
-            alt="Bitzaro logo"
-            src={bitzaroLogoWhite}
-          />
-        </a>
+      <div className="max-w-[1200px] w-full mx-auto flex justify-between items-center px-4">
+        {/* Left group */}
+        <div className="inline-flex items-end gap-9">
+          <Link
+            to="/"
+            className="focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 focus:ring-offset-[#16121f] rounded"
+            aria-label="Bitzaro Home"
+          >
+            <img
+              className="h-10 object-contain"
+              alt="Bitzaro logo"
+              src={bitzaroLogoWhite}
+            />
+          </Link>
 
-        <ul
-          className="inline-flex items-center gap-6 relative flex-[0_0_auto] list-none m-0 p-0"
-          role="menubar"
-        >
-          {navigationItems.map((item, index) => (
-            <li key={index} role="none">
-              <a
-                href={item.href}
-                className="relative w-fit mt-[-1.00px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-black text-sm tracking-[0] leading-[normal] whitespace-nowrap hover:text-primitives-brand-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 rounded-sm"
-                role="menuitem"
-                tabIndex="0"
+          <nav
+            className="inline-flex items-center gap-6"
+            role="navigation"
+            aria-label="Main navigation"
+          >
+            {navigationItems.map((item, index) => (
+              <Link
+                key={index}
+                to={item.href}
+                className="relative w-fit mt-[-1px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-sm leading-normal text-white hover:text-primitives-brand-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 focus:ring-offset-[#16121f] rounded px-1 py-1"
               >
                 {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+              </Link>
+            ))}
+          </nav>
+        </div>
 
-      <div className="relative w-[170px] h-[37px]">
-        <button
-          className="all-[unset] box-border inline-flex px-4 py-2 bg-primitives-brand-primary border border-solid flex-col items-center justify-center rounded-md border-primitives-brand-primary hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 transition-all duration-200 cursor-pointer"
-          type="button"
-          aria-label="Sign up for an account"
-        >
-          <span className="mt-[-1.00px] [font-family:'Inter-Medium',Helvetica] font-medium text-white text-sm leading-[21px] relative w-fit text-center tracking-[0] whitespace-nowrap">
-            Sign Up
-          </span>
-        </button>
+        {/* Right group */}
+        <div className="inline-flex items-center gap-4">
+          <button
+            className="all-[unset] box-border inline-flex px-4 py-2 flex-col items-center justify-center rounded-md bg-[#f1eef71a] text-white hover:bg-[#f1eef72a] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#16121f]"
+            type="button"
+            aria-label="Login to your account"
+          >
+            <span className="[font-family:'Inter-Medium',Helvetica] font-medium text-sm leading-[21px] text-center whitespace-nowrap">
+              Login
+            </span>
+          </button>
 
-        <button
-          className="all-[unset] box-border inline-flex px-4 py-2 bg-[#f0effa] flex-col items-center justify-center rounded-md hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-[#2e065d] focus:ring-offset-2 transition-all duration-200 cursor-pointer"
-          type="button"
-          aria-label="Login to your account"
-        >
-          <span className="mt-[-1.00px] [font-family:'Inter-Medium',Helvetica] font-medium text-[#2e065d] text-sm leading-[21px] relative w-fit text-center tracking-[0] whitespace-nowrap">
-            Login
-          </span>
-        </button>
+          <button
+            className="all-[unset] box-border inline-flex flex-col items-center justify-center px-4 py-2 rounded-md bg-[#7815F9] hover:bg-opacity-90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 text-white"
+            type="button"
+            aria-label="Create new account"
+          >
+            <span className="[font-family:'Inter-Medium',Helvetica] font-medium text-sm leading-[21px] text-center whitespace-nowrap">
+              Sign Up
+            </span>
+          </button>
+
+          <button
+            className="inline-flex items-center gap-2.5 p-2 rounded-full bg-[#f1eef71a] hover:bg-[#f1eef72a] overflow-hidden transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#16121f]"
+            type="button"
+            aria-label="Change language"
+          >
+            <img
+              className="w-6 h-6 aspect-square"
+              alt="Language selector"
+              src={languageWhite}
+            />
+          </button>
+        </div>
       </div>
-    </nav>
+    </header>
   );
 };

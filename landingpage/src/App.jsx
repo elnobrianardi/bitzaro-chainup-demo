@@ -1,18 +1,20 @@
 import { Routes, Route } from "react-router-dom";
-import { Landing } from "./pages/Landing"; 
+import { Landing } from "./pages/Landing";
 import Market from "./pages/Market";
 import Spot from "./pages/Spot";
 import Favourite from "./pages/Favourite";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/market" element={<Market />} />
-      <Route path="/spot" element={<Spot />} />
-      <Route path="/favourite" element={<Favourite />} />
-    </Routes>
+    <div className="w-full h-full">
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/market" element={<Market />} />
+        <Route path="/spot" element={<Spot />} />
+        <Route path="/favourite" element={<Favourite />} />
+      </Routes>
+    </div>
   );
 }
 
-export default App; 
+export default App;

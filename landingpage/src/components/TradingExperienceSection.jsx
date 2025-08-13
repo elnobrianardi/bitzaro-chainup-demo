@@ -14,7 +14,7 @@ export const TradingExperienceSection = () => {
       </div>
 
       <button
-        className="flex w-[300px] px-5 py-3 bg-white border border-solid border-primitives-brand-primary flex-col items-center justify-center rounded-md hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
+        className="flex w-[300px] px-5 py-3 bg-white  flex-col items-center justify-center rounded-md hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
         aria-label="Download Bitzaro Now"
       >
         <span className="[font-family:'Inter-SemiBold',Helvetica] font-semibold text-[#7815f9] text-xl leading-[30px] text-center tracking-[0] whitespace-nowrap">

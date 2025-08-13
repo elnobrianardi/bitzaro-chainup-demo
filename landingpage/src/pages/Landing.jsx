@@ -18,42 +18,53 @@ import Dashboard from "../assets/Dashboard_Screen_Capture/Dashboard.png";
 
 export const Landing = () => {
   return (
-    <div className="min-h-screen w-full bg-white text-black">
+    <div className="w-full bg-white text-black">
       <HeaderSection />
 
       {/* Hero Section - full width */}
-      <section className="w-full">
+      <section className="w-full py-8">
         <IntroductionSection />
       </section>
 
       {/* One App Heading */}
-      <section className="relative w-full mx-auto text-center items-center justify-center">
-        <div className="absolute -top-8 left-1/2 -translate-x-1/2 pt-16 rounded-t-4xl w-full bg-white">
-          <h2 className="text-5xl font-extrabold">
-            One App, Endless Possibilities
-          </h2>
-        </div>
-      </section>
-
-      {/* Trading Experience */}
-      <section className="w-full">
-        <div className="max-w-[1200px] mx-auto w-full py-32 grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-          <ContentWrapperSection />
-          <MainContentSection />
-          <div className="flex gap-8">
-            <div className="flex flex-col gap-8">
-              <FeaturesSection />
-              <AppOverviewSection />
-            </div>
-            <div>
-              <ComponentNodeSection />
-            </div>
+      <section className="relative w-full bg-white">
+        <div className="max-w-[1200px] mx-auto text-center items-center justify-center px-4">
+          <div className="absolute -top-16 left-1/2 -translate-x-1/2 pt-16 rounded-t-4xl w-full bg-white">
+            <h2 className="text-5xl font-extrabold">
+              One App, Endless Possibilities
+            </h2>
           </div>
         </div>
       </section>
 
+      {/* Trading Experience */}
+      <section className="w-full flex justify-center items-center">
+  <div className="max-w-[1200px] mx-auto py-32 flex flex-col gap-8 px-4">
+    <ContentWrapperSection />
+    <MainContentSection />
+
+    {/* Inner sections */}
+    <div className="w-full max-w-[1200px] mx-auto flex flex-wrap md:flex-nowrap gap-8 justify-center items-start">
+      {/* Left column */}
+      <div className="flex flex-col gap-8 w-full items-center">
+        <FeaturesSection />
+        <AppOverviewSection />
+      </div>
+
+      {/* Right column */}
+      <div className="flex flex-col w-full items-center">
+        <ComponentNodeSection />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
       {/* Ultimate Web Trading Experience */}
-      <section className="w-full">
+      <section className="w-full bg-white">
         <div className="max-w-[1200px] mx-auto text-center pb-16 px-4">
           <h2 className="text-5xl font-extrabold">
             The Ultimate Web <br /> Trading Experience
@@ -81,11 +92,12 @@ export const Landing = () => {
 
       {/* Bitcoin Investment */}
       <section className="w-full">
-        <div className="max-w-[1200px] mx-auto text-center py-16 px-4">
-          <div className="flex gap-8">
+        <div className="max-w-[1200px] mx-auto py-16 px-4">
+          <div className="flex gap-4 items-start">
             <h2 className="text-5xl font-extrabold pb-16 text-left">
-              If you'd invested in <span className="underline">Bitcoin</span>{" "}</h2>
-                <img src={downArrow} alt="" className="mt-8 w-6 h-4 my-4" />
+              If you'd invested in <span className="underline">Bitcoin</span>
+            </h2>
+            <img src={downArrow} alt="" className="mt-8 w-6 h-4 my-4" />
           </div>
 
           <BitcoinInvestmentSection />
@@ -97,7 +109,7 @@ export const Landing = () => {
       </section>
 
       {/* Safety & Investment */}
-      <section className="w-full">
+      <section className="w-full bg-white">
         <div className="max-w-[1200px] mx-auto text-center py-16 px-4">
           <h2 className="text-5xl font-extrabold mt-12">
             Your Safety, Our Priority
@@ -115,9 +127,11 @@ export const Landing = () => {
           </h2>
           <CryptoInsightsSection />
         </div>
-        <div className="w-full max-auto text-center">
+        <div className="w-full">
           <TradingExperienceSection />
-          <InsightsSection />
+          <div className="max-w-[1200px] mx-auto text-center px-4">
+            <InsightsSection />
+          </div>
         </div>
       </section>
     </div>

@@ -18,11 +18,12 @@ export const BitcoinInvestmentSection = () => {
   };
 
   return (
-    <section className="flex w-[1180px] items-center gap-8 p-[42px] rounded-[20px] overflow-hidden border border-solid border-[#dcdcdc]">
-      <div className="flex flex-col items-start gap-[52px] flex-1 grow">
+    <section className="flex flex-col lg:flex-row w-full max-w-[1200px] mx-auto items-center gap-8 p-6 sm:p-10 rounded-[20px] overflow-hidden border border-solid border-[#dcdcdc]">
+      {/* Left content */}
+      <div className="flex flex-col items-start gap-8 flex-1 w-full">
         {/* Amount text */}
         <div className="flex flex-col items-start gap-6 w-full">
-          <p className="text-black text-2xl leading-9">
+          <p className="text-black text-lg sm:text-2xl leading-snug">
             With a principal of{" "}
             <span className="font-bold">Rp {amount.toLocaleString()}</span>
           </p>
@@ -34,9 +35,13 @@ export const BitcoinInvestmentSection = () => {
             max={maxAmount}
             value={amount}
             onChange={(e) => setAmount(Number(e.target.value))}
-            className="w-[580px] appearance-none cursor-pointer"
+            className="w-full appearance-none cursor-pointer"
             style={{
-              background: `linear-gradient(to right, #7815f9 ${(amount - minAmount) / (maxAmount - minAmount) * 100}%, #e2e5e7 ${(amount - minAmount) / (maxAmount - minAmount) * 100}%)`,
+              background: `linear-gradient(to right, #7815f9 ${
+                ((amount - minAmount) / (maxAmount - minAmount)) * 100
+              }%, #e2e5e7 ${
+                ((amount - minAmount) / (maxAmount - minAmount)) * 100
+              }%)`,
               borderRadius: "9999px",
               height: "16px",
               border: "1px solid #cdcdcd",
@@ -54,7 +59,7 @@ export const BitcoinInvestmentSection = () => {
                 background: white;
                 border: 2px solid #7815f9;
                 cursor: pointer;
-                margin-top: -6px; /* Half of (thumb - track)/2 */
+                margin-top: -6px;
               }
               input[type="range"]::-webkit-slider-runnable-track {
                 height: 16px;
@@ -80,9 +85,9 @@ export const BitcoinInvestmentSection = () => {
 
         {/* Year selector */}
         <div className="flex flex-col items-start gap-4 w-full">
-          <div className="text-black text-2xl">For</div>
+          <div className="text-black text-lg sm:text-2xl">For</div>
           <div
-            className="flex items-center gap-5 w-full"
+            className="flex flex-wrap items-center gap-3 sm:gap-5 w-full"
             role="radiogroup"
             aria-label="Investment duration"
           >
@@ -90,7 +95,7 @@ export const BitcoinInvestmentSection = () => {
               <button
                 key={option.value}
                 onClick={() => handleYearSelect(option.value)}
-                className={`flex items-center justify-center px-7 py-3 flex-1 rounded-[50px] border transition-colors duration-200
+                className={`flex items-center justify-center px-5 sm:px-7 py-2 sm:py-3 flex-1 rounded-[50px] border transition-colors duration-200
                   ${
                     selectedYear === option.value
                       ? "bg-[#7815f90f] border-[#7815f9] text-[#7815f9]"
@@ -106,12 +111,16 @@ export const BitcoinInvestmentSection = () => {
         </div>
       </div>
 
-      {/* Result */}
-      <div className="flex flex-col items-center justify-center gap-5 flex-1 grow">
-        <div className="text-black text-2xl">Your principal would've become</div>
+      {/* Right content (Result) */}
+      <div className="flex flex-col items-center justify-center gap-5 flex-1 w-full text-center lg:text-left">
+        <div className="text-black text-lg sm:text-2xl">
+          Your principal would've become
+        </div>
         <div className="flex flex-col items-center">
-          <div className="font-bold text-[#25ba7f] text-5xl">Rp 64.377</div>
-          <div className="text-[#25ba7f] text-[32px] font-semibold">
+          <div className="font-bold text-[#25ba7f] text-3xl sm:text-5xl">
+            Rp 64.377
+          </div>
+          <div className="text-[#25ba7f] text-xl sm:text-[32px] font-semibold">
             +100.32%
           </div>
         </div>

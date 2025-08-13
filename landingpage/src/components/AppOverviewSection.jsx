@@ -1,41 +1,32 @@
 import React from "react";
-import arrowRightAlt from "../assets/Icon/Navigation_Icon_(Profile, Language, Arrow)/arrow_right_alt.png";
-import fireBtc1 from "../assets/Add-On/fire-btc 1.png";
+import arrowRightAlt4 from "../assets/Icon/Navigation_Icon_(Profile, Language, Arrow)/arrow_right_alt.png";
+import frame3 from "../assets/Add-On/List_Of_Currency.png";
 
 export const AppOverviewSection = () => {
   return (
-    <section
-      className="relative flex w-[574px] h-40 items-center gap-[42px] p-7 rounded-2xl bg-[linear-gradient(0deg,rgba(250,250,250,0.2)_0%,rgba(250,250,250,0.2)_100%),linear-gradient(0deg,rgba(255,145,34,0.1)_0%,rgba(255,145,34,0.1)_100%)]"
-      role="banner"
-      aria-label="App overview section"
-    >
+    <section className="relative flex flex-col sm:flex-row w-full sm:h-40 items-center gap-4 sm:gap-8 px-4 sm:px-7 py-6 sm:py-8 rounded-2xl overflow-visible bg-[linear-gradient(0deg,rgba(246,247,248,1)_0%,rgba(246,247,248,1)_100%),linear-gradient(0deg,rgba(239,242,245,1)_0%,rgba(239,242,245,1)_100%)]">
+      
       {/* Button on top right */}
       <button
-        className="absolute top-4 right-4 inline-flex items-center gap-2.5 p-2 bg-white rounded-[50px] overflow-hidden hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition-colors duration-200"
-        aria-label="Navigate to token discovery"
-        type="button"
+        className="absolute top-3 sm:top-4 right-3 sm:right-4 inline-flex items-center gap-2.5 p-2 bg-white rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+        aria-label="Learn more about trading cryptocurrencies"
       >
-        <img
-          className="w-6 h-6"
-          alt=""
-          src={arrowRightAlt}
-          role="presentation"
-        />
+        <img className="w-5 sm:w-6 h-5 sm:h-6" alt="" src={arrowRightAlt4} />
       </button>
 
       <img
-        className="w-[78px] h-[110px] object-cover"
-        alt="Fire bitcoin token illustration"
-        src={fireBtc1}
+        className="w-full sm:w-[198px] h-auto object-contain"
+        alt="Cryptocurrency trading illustration"
+        src={frame3}
       />
 
-      <h2 className="w-[461px] [font-family:'Roboto-Medium',Helvetica] font-medium text-transparent text-[32px] tracking-[0] leading-10">
-        <span className="text-[#323232]">Swap and discover</span>
-        <span className="text-[#e37403]">
+      <h2 className="w-full sm:w-fit font-medium text-[28px] sm:text-[32px] leading-8 sm:leading-10 tracking-[0] text-left">
+        <span className="text-[#323232]">Trade </span>
+        <span className="text-black">300+ cryptos</span>
+        <span className="text-[#323232]">
           <br />
-          the hottest tokens{" "}
+          with Rupiah
         </span>
-        <span className="text-[#323232]">in Web3</span>
       </h2>
     </section>
   );

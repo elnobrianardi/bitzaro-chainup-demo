@@ -4,29 +4,30 @@ import successBuy1 from "../assets/GIF/5186020064e1c2d1d8a3432e146567abe8e7504a.
 
 export const ContentWrapperSection = () => {
   return (
-    <section className="relative w-[574px] h-[600px] p-7 rounded-2xl overflow-hidden bg-[linear-gradient(0deg,rgba(94,255,255,0.08)_0%,rgba(94,255,255,0.08)_100%)]">
+    <section className="relative w-full max-w-[574px] h-auto sm:h-full p-4 sm:p-7 rounded-2xl overflow-visible bg-[linear-gradient(0deg,rgba(94,255,255,0.08)_0%,rgba(94,255,255,0.08)_100%)]">
+      
       {/* Button positioned top right */}
       <button
-        className="absolute top-7 right-7 inline-flex items-center gap-2.5 p-2 bg-white rounded-[50px] overflow-hidden hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#0b8c8c] focus:ring-opacity-50"
+        className="absolute top-3 sm:top-7 right-3 sm:right-7 inline-flex items-center gap-2.5 p-2 bg-white rounded-full hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#0b8c8c] focus:ring-opacity-50"
         aria-label="Navigate to next section"
       >
-        <img src={arrowRightAlt3} className="w-6 h-6" alt="" />
+        <img src={arrowRightAlt3} className="w-5 sm:w-6 h-5 sm:h-6" alt="" />
       </button>
 
-      <div className="flex flex-col items-start gap-4">
-        <div className="w-fit mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium text-[#0b8c8c] text-xl tracking-[0] leading-[25px] whitespace-nowrap">
+      <div className="flex flex-col items-start gap-3 sm:gap-4">
+        <div className="w-fit font-medium text-[#0b8c8c] text-lg sm:text-xl leading-[25px] tracking-[0] whitespace-nowrap">
           ❘ Beginner Friendly
         </div>
 
-        <h2 className="w-fit [font-family:'Roboto-Medium',Helvetica] font-medium text-[#323232] text-[32px] tracking-[0] leading-10">
+        <h2 className="w-full sm:w-fit font-medium text-[#323232] text-2xl sm:text-[32px] leading-8 sm:leading-10 tracking-[0]">
           The simplest way to trade, <br />
           perfect for beginner
         </h2>
 
         {/* Centered image */}
-        <div className="flex w-full justify-center mt-8">
+        <div className="flex w-full justify-center mt-4 sm:mt-8">
           <img
-            className="w-[336px] h-[373px] aspect-[0.78] object-cover"
+            className="w-full max-w-[336px] h-auto object-contain"
             alt="Mobile app interface showing successful purchase completion"
             src={successBuy1}
           />

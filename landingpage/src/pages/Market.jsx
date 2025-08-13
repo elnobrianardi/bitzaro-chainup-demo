@@ -9,14 +9,14 @@ import { InsightsSectionDark } from "../components/InsightSectionDark";
 const Market = () => {
   
   return (
-    <div className="min-h-screen w-full bg-black">
+    <div className="w-full bg-black">
       <NavigationSection />
 
       <section className="pt-[80px] max-w-[1200px] mx-auto">
         <MarketHeroSection />
       </section>
 
-      <section className="grid gap-4 py-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full max-w-[1200px] mx-auto">
+      <section className="grid gap-4 p-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full max-w-[1200px] mx-auto">
       {lineChartMockData.map((item) => (
         <LineChartCard key={item.id} {...item} />
       ))}

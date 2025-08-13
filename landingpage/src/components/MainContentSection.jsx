@@ -4,33 +4,36 @@ import arrow from '../assets/Icon/Navigation_Icon_(Profile, Language, Arrow)/arr
 
 export const MainContentSection = () => {
   return (
-    <section className="relative w-[574px] h-[600px] p-8 bg-[#a216ff0a] rounded-2xl overflow-hidden flex flex-col items-start gap-6">
+    <section className="relative w-full max-w-[574px] h-auto px-4 sm:px-6 md:px-8 pt-6 sm:pt-8 bg-[#a216ff0a] rounded-2xl overflow-visible flex flex-col items-start gap-4 sm:gap-6">
+      
       {/* Arrow button at top right */}
       <button
-        className="absolute top-8 right-8 inline-flex items-center gap-2.5 p-2 bg-white rounded-[50px] overflow-hidden hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#53199e] focus:ring-opacity-50"
+        className="absolute top-4 sm:top-8 right-4 sm:right-8 inline-flex items-center gap-2.5 p-2 bg-white rounded-full hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#53199e] focus:ring-opacity-50"
         aria-label="Learn more about advanced trading"
       >
-        <img src={arrow} className='w-6 h-6' alt="" />
+        <img src={arrow} className='w-5 sm:w-6 h-5 sm:h-6' alt="" />
       </button>
 
       {/* Text content */}
-      <div className="flex flex-col items-start gap-4 w-full mb-8">
-        <h3 className="relative w-fit mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium text-[#53199e] text-xl tracking-[0] leading-[25px] whitespace-nowrap">
+      <div className="flex flex-col items-start gap-2 sm:gap-4 w-full sm:mb-8">
+        <h3 className="font-medium text-[#53199e] text-lg sm:text-xl tracking-[0] leading-[25px] whitespace-nowrap">
           ❘ Advanced Trading
         </h3>
 
-        <h2 className="relative w-full [font-family:'Roboto-Medium',Helvetica] font-medium text-[#323232] text-[32px] tracking-[0] leading-10">
+        <h2 className="w-full font-medium text-[#323232] text-xl sm:text-2xl md:text-[32px] tracking-[0] leading-7 sm:leading-8 md:leading-10">
           Step up with advanced&nbsp;&nbsp;spot trading <br />
           and 25x leverage on Future
         </h2>
       </div>
 
       {/* Image below the h2 */}
-      <img
-        className="w-full max-w-[458px] h-[357px] aspect-[1.18] object-cover"
-        alt="Advanced spot trading interface showing trading charts and leverage options"
-        src={spot1}
-      />
+      <div className="flex w-full justify-center">
+        <img
+          className="w-full max-w-[458px] h-auto object-contain"
+          alt="Advanced spot trading interface showing trading charts and leverage options"
+          src={spot1}
+        />
+      </div>
     </section>
   );
 };

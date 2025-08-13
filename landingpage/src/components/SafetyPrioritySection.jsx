@@ -14,7 +14,7 @@ export const SafetyPrioritySection = () => {
     {
       id: 2,
       icon: custodian,
-      title: "Word Class Custodian",
+      title: "World Class Custodian",
       description:
         "Assets are securely stored in PT Kustodian Koin Indonesia (ICC) and Fireblocks, using world-class technology.",
     },
@@ -22,27 +22,30 @@ export const SafetyPrioritySection = () => {
 
   return (
     <section
-      className="flex w-[1179px] items-start gap-[62px] left-[131px]"
+      className="flex flex-col md:flex-row w-full max-w-[1200px] mx-auto items-center md:items-start gap-10 md:gap-[62px] px-4"
       aria-labelledby="safety-priority-heading"
     >
+      <h2 id="safety-priority-heading" className="sr-only">
+        Safety Priority Features
+      </h2>
+
       {safetyFeatures.map((feature) => (
         <article
           key={feature.id}
-          className="flex flex-col items-start gap-4 relative flex-1 grow"
+          className="flex flex-col items-start gap-4 flex-1"
         >
           <img
-            className="relative flex-[0_0_auto] h-[58px] w-[58px]"
+            className="h-[58px] w-[58px]"
             alt={`${feature.title} icon`}
             src={feature.icon}
             role="img"
           />
 
-          <div className="flex flex-col items-start gap-2 relative self-stretch w-full flex-[0_0_auto]">
-            <h3 className="relative w-fit mt-[-1.00px] [font-family:'Roboto-SemiBold',Helvetica] font-semibold text-[#1b1b1b] text-2xl text-center tracking-[0] leading-[30px] whitespace-nowrap">
+          <div className="flex flex-col items-start gap-2 w-full">
+            <h3 className="font-semibold text-[#1b1b1b] text-xl sm:text-2xl leading-[30px]">
               {feature.title}
             </h3>
-
-            <p className="text-left relative self-stretch [font-family:'Roboto-Regular',Helvetica] font-normal text-black text-xl tracking-[0] leading-[30px]">
+            <p className="text-left font-normal text-black text-base sm:text-xl leading-[30px]">
               {feature.description}
             </p>
           </div>

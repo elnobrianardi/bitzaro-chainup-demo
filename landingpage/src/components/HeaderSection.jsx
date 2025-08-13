@@ -4,21 +4,22 @@ import bitzaroLogoWhite from "../assets/Logo/BitzaroLogoWhite.png";
 import bitzaroLogoBlack from "../assets/Logo/BitzaroLogoBlack.png";
 import languageBlack from "../assets/Icon/mynaui_globe.png";
 import languageWhite from "../assets/Icon/mynaui_globe-1.png";
+import { Menu, X } from "lucide-react"; 
 
 export const HeaderSection = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const triggerHeight = 200; 
-    setScrolled(scrollTop > triggerHeight);
-  };
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const triggerHeight = 200;
+      setScrolled(scrollTop > triggerHeight);
+    };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navigationItems = [
     { label: "Market", href: "/market" },
@@ -28,22 +29,14 @@ export const HeaderSection = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full backdrop-blur-[5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(5px)_brightness(100%)] flex items-center z-50 transition-colors duration-300 ${
+      className={`fixed top-0 left-0 w-full backdrop-blur-[5px] transition-colors duration-300 z-50 ${
         scrolled ? "bg-white shadow-md" : "bg-[#16121f]"
       } py-4`}
     >
       <div className="max-w-[1200px] w-full mx-auto flex justify-between items-center px-4">
         {/* Left group */}
-        <div className="inline-flex items-end gap-9">
-          <Link
-            to="/"
-            className={`focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 rounded ${
-              scrolled
-                ? "focus:ring-offset-white"
-                : "focus:ring-offset-[#16121f]"
-            }`}
-            aria-label="Bitzaro Home"
-          >
+        <div className="flex items-center gap-6">
+          <Link to="/">
             <img
               className="h-10 object-contain"
               alt="Bitzaro logo"
@@ -51,19 +44,14 @@ export const HeaderSection = () => {
             />
           </Link>
 
-          <nav
-            className="inline-flex items-center gap-6"
-            role="navigation"
-            aria-label="Main navigation"
-          >
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-6">
             {navigationItems.map((item, index) => (
               <Link
                 key={index}
                 to={item.href}
-                className={`relative w-fit mt-[-1px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-sm leading-normal hover:text-primitives-brand-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 rounded px-1 py-1 ${
-                  scrolled
-                    ? "text-black focus:ring-offset-white"
-                    : "text-white focus:ring-offset-[#16121f]"
+                className={`font-semibold text-sm hover:text-primitives-brand-primary transition-colors ${
+                  scrolled ? "text-black" : "text-white"
                 }`}
               >
                 {item.label}
@@ -73,48 +61,84 @@ export const HeaderSection = () => {
         </div>
 
         {/* Right group */}
-        <div className="inline-flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <button
-            className={`all-[unset] box-border inline-flex px-4 py-2 flex-col items-center justify-center rounded-md hover:bg-opacity-90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 ${
+            className={`px-4 py-2 rounded-md transition-colors ${
               scrolled
-                ? "bg-gray-300 text-black focus:ring-offset-white"
-                : "bg-[#f1eef71a] text-white hover:bg-[#f1eef72a] focus:ring-offset-[#16121f]"
+                ? "bg-gray-300 text-black"
+                : "bg-[#f1eef71a] text-white hover:bg-[#f1eef72a]"
             }`}
-            type="button"
-            aria-label="Login to your account"
           >
-            <span className="[font-family:'Inter-Medium',Helvetica] font-medium text-sm leading-[21px] text-center whitespace-nowrap">
-              Login
-            </span>
+            Login
           </button>
-
-          <button
-            className="all-[unset] box-border inline-flex flex-col items-center justify-center px-4 py-2 rounded-md bg-[#7815F9] hover:bg-opacity-90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 text-white"
-            type="button"
-            aria-label="Create new account"
-          >
-            <span className="[font-family:'Inter-Medium',Helvetica] font-medium text-sm leading-[21px] text-center whitespace-nowrap">
-              Sign Up
-            </span>
+          <button className="px-4 py-2 rounded-md bg-[#7815F9] text-white hover:bg-opacity-90 transition-all">
+            Sign Up
           </button>
-
           <button
-            className={`inline-flex items-center gap-2.5 p-2 rounded-full overflow-hidden transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
-              scrolled
-                ? "bg-gray-200 focus:ring-black focus:ring-offset-white"
-                : "bg-[#f1eef71a] hover:bg-[#f1eef72a] focus:ring-white focus:ring-offset-[#16121f]"
+            className={`p-2 rounded-full ${
+              scrolled ? "bg-gray-200" : "bg-[#f1eef71a] hover:bg-[#f1eef72a]"
             }`}
-            type="button"
-            aria-label="Change language"
           >
             <img
-              className="w-6 h-6 aspect-square"
+              className="w-6 h-6"
+              src={scrolled ? languageBlack : languageWhite}
               alt="Language selector"
-              src={scrolled ? languageBlack : languageWhite} 
             />
           </button>
         </div>
+
+        {/* Mobile burger button */}
+        <button
+          className="md:hidden p-2 rounded-md focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? (
+            <X
+              className={`${scrolled ? "text-black" : "text-white"}`}
+              size={24}
+            />
+          ) : (
+            <Menu
+              className={`${scrolled ? "text-black" : "text-white"}`}
+              size={24}
+            />
+          )}
+        </button>
       </div>
+
+      {/* Mobile dropdown menu */}
+      {menuOpen && (
+        <div
+          className={`md:hidden flex flex-col items-center gap-4 py-4 transition-all ${
+            scrolled ? "bg-white text-black" : "bg-[#16121f] text-white"
+          }`}
+        >
+          {navigationItems.map((item, index) => (
+            <Link
+              key={index}
+              to={item.href}
+              className="text-sm font-semibold hover:text-primitives-brand-primary"
+              onClick={() => setMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <div className="flex gap-3 mt-2">
+            <button
+              className={`px-4 py-2 rounded-md ${
+                scrolled
+                  ? "bg-gray-300 text-black"
+                  : "bg-[#f1eef71a] text-white hover:bg-[#f1eef72a]"
+              }`}
+            >
+              Login
+            </button>
+            <button className="px-4 py-2 rounded-md bg-[#7815F9] text-white">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

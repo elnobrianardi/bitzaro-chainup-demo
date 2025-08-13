@@ -29,15 +29,17 @@ export const InsightsSectionDark = () => {
   };
 
   return (
-    <footer className="flex max-w-[1200px] mx-auto items-start gap-8 py-[42px] text-white">
-      <div className="flex flex-col w-[336px] items-start gap-6 relative">
+    <footer className="max-w-[1200px] mx-auto px-6 sm:px-12 py-10 flex xl:flex-row flex-col gap-10 text-white">
+      
+      {/* Logo + Address + Button centered */}
+      <div className="flex flex-col items-center gap-6 text-center">
         <img
-          className="relative w-[122px] h-6 aspect-[5.1] object-cover"
-          alt="Bitzaro logo RGB CL"
+          className="w-[122px] h-6 object-contain"
+          alt="Bitzaro logo"
           src={bitzaroLogoWhite}
         />
 
-        <address className="text-left relative w-fit [font-family:'Inter-Medium',Helvetica] font-medium text-white text-sm tracking-[0] leading-[21px] not-italic">
+        <address className="font-medium text-gray-400 text-sm leading-[21px] not-italic">
           Room 1046, 14/F, Solo Building
           <br />
           41–43 Carnarvon Road, Tsim Sha Tsui
@@ -45,100 +47,37 @@ export const InsightsSectionDark = () => {
           Kowloon, Hong Kong
         </address>
 
-        <button className="inline-flex flex-col items-center justify-center px-4 py-2 relative flex-[0_0_auto] bg-[#7815F9] rounded-md hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 transition-colors">
-          <span className="mt-[-1.00px] [font-family:'Inter-Medium',Helvetica] font-medium text-white text-sm leading-[21px] relative w-fit text-center tracking-[0] whitespace-nowrap">
-            Download Bitzaro App
-          </span>
+        <button className="px-4 py-2 bg-[#7815F9] rounded-md text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
+          Download Bitzaro App
         </button>
       </div>
 
-      <nav
-        className="flex flex-col items-start gap-6 relative flex-1 grow"
-        aria-label="Product navigation"
-      >
-        <h3 className="relative w-fit mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium text-[#5c5c5c] text-sm tracking-[0] leading-[21px] whitespace-nowrap">
-          PRODUCT
-        </h3>
-
-        <ul className="inline-flex flex-col items-start gap-5 relative flex-[0_0_auto]">
-          {footerData.product.map((item, index) => (
-            <li key={index}>
-              <a
-                href={item.href}
-                className="w-fit mt-[-1.00px] text-sm leading-[21px] whitespace-nowrap relative [font-family:'Roboto-Medium',Helvetica] font-medium text-white tracking-[0] hover:text-primitives-brand-primary transition-colors focus:outline-none focus:underline"
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <nav
-        className="flex flex-col items-start gap-6 relative flex-1 grow"
-        aria-label="Information navigation"
-      >
-        <h3 className="relative w-fit mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium text-[#5c5c5c] text-sm tracking-[0] leading-[21px] whitespace-nowrap">
-          INFO
-        </h3>
-
-        <ul className="inline-flex flex-col items-start gap-5 relative flex-[0_0_auto]">
-          {footerData.info.map((item, index) => (
-            <li key={index}>
-              <a
-                href={item.href}
-                className="relative w-fit mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium text-white text-sm tracking-[0] leading-[21px] whitespace-nowrap hover:text-primitives-brand-primary transition-colors focus:outline-none focus:underline"
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <nav
-        className="flex flex-col items-start gap-6 relative flex-1 grow"
-        aria-label="Learning navigation"
-      >
-        <h3 className="relative w-fit mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium text-[#5c5c5c] text-sm tracking-[0] leading-[21px] whitespace-nowrap">
-          LEARN
-        </h3>
-
-        <ul className="inline-flex flex-col items-start gap-5 relative flex-[0_0_auto]">
-          {footerData.learn.map((item, index) => (
-            <li key={index}>
-              <a
-                href={item.href}
-                className="relative w-fit mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium text-white text-sm tracking-[0] leading-[21px] whitespace-nowrap hover:text-primitives-brand-primary transition-colors focus:outline-none focus:underline"
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <nav
-        className="flex flex-col items-start gap-6 relative flex-1 grow"
-        aria-label="Company navigation"
-      >
-        <h3 className="relative w-fit mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium text-[#5c5c5c] text-sm tracking-[0] leading-[21px] whitespace-nowrap">
-          COMPANY
-        </h3>
-
-        <ul className="inline-flex flex-col items-start gap-5 relative flex-[0_0_auto]">
-          {footerData.company.map((item, index) => (
-            <li key={index}>
-              <a
-                href={item.href}
-                className="relative w-fit mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium text-white text-sm tracking-[0] leading-[21px] whitespace-nowrap hover:text-primitives-brand-primary transition-colors focus:outline-none focus:underline"
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      {/* Footer Links in 2-column grid on small screens, 4 columns on larger screens */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 w-full text-center">
+        {Object.entries(footerData).map(([section, links]) => (
+          <nav
+            key={section}
+            className="flex flex-col gap-6"
+            aria-label={`${section} navigation`}
+          >
+            <h3 className="text-gray-500 text-sm font-medium uppercase">
+              {section}
+            </h3>
+            <ul className="flex flex-col gap-4">
+              {links.map((item, index) => (
+                <li key={index}>
+                  <a
+                    href={item.href}
+                    className="text-white text-sm font-medium hover:text-[#913DFF] transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))}
+      </div>
     </footer>
   );
 };

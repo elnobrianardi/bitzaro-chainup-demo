@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import bitzaroLogoWhite from "../assets/Logo/BitzaroLogoWhite.png";
 import languageWhite from "../assets/Icon/mynaui_globe-1.png";
+import { Menu, X } from "lucide-react";
 
 export const NavigationSection = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const navigationItems = [
     { label: "Market", href: "/market" },
     { label: "Trade", href: "/trade" },
@@ -11,34 +14,25 @@ export const NavigationSection = () => {
   ];
 
   return (
-    <header
-      className="fixed top-0 left-0 w-full bg-[#16121f] backdrop-blur-[5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(5px)_brightness(100%)] flex items-center z-50 py-4"
-    >
+    <header className="fixed top-0 left-0 w-full bg-[#16121f] backdrop-blur-[5px] z-50 py-4">
       <div className="max-w-[1200px] w-full mx-auto flex justify-between items-center px-4">
         {/* Left group */}
-        <div className="inline-flex items-end gap-9">
-          <Link
-            to="/"
-            className="focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 focus:ring-offset-[#16121f] rounded"
-            aria-label="Bitzaro Home"
-          >
+        <div className="flex items-center gap-6">
+          <Link to="/">
             <img
               className="h-10 object-contain"
-              alt="Bitzaro logo"
               src={bitzaroLogoWhite}
+              alt="Bitzaro logo"
             />
           </Link>
 
-          <nav
-            className="inline-flex items-center gap-6"
-            role="navigation"
-            aria-label="Main navigation"
-          >
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-6">
             {navigationItems.map((item, index) => (
               <Link
                 key={index}
                 to={item.href}
-                className="relative w-fit mt-[-1px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-sm leading-normal text-white hover:text-primitives-brand-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 focus:ring-offset-[#16121f] rounded px-1 py-1"
+                className="font-semibold text-sm text-white hover:text-primitives-brand-primary transition-colors"
               >
                 {item.label}
               </Link>
@@ -47,40 +41,50 @@ export const NavigationSection = () => {
         </div>
 
         {/* Right group */}
-        <div className="inline-flex items-center gap-4">
-          <button
-            className="all-[unset] box-border inline-flex px-4 py-2 flex-col items-center justify-center rounded-md bg-[#f1eef71a] text-white hover:bg-[#f1eef72a] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#16121f]"
-            type="button"
-            aria-label="Login to your account"
-          >
-            <span className="[font-family:'Inter-Medium',Helvetica] font-medium text-sm leading-[21px] text-center whitespace-nowrap">
-              Login
-            </span>
+        <div className="hidden md:flex items-center gap-4">
+          <button className="px-4 py-2 rounded-md bg-[#f1eef71a] text-white hover:bg-[#f1eef72a] transition-colors">
+            Login
           </button>
-
-          <button
-            className="all-[unset] box-border inline-flex flex-col items-center justify-center px-4 py-2 rounded-md bg-[#7815F9] hover:bg-opacity-90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primitives-brand-primary focus:ring-offset-2 text-white"
-            type="button"
-            aria-label="Create new account"
-          >
-            <span className="[font-family:'Inter-Medium',Helvetica] font-medium text-sm leading-[21px] text-center whitespace-nowrap">
-              Sign Up
-            </span>
+          <button className="px-4 py-2 rounded-md bg-[#7815F9] text-white hover:bg-opacity-90 transition-all">
+            Sign Up
           </button>
-
-          <button
-            className="inline-flex items-center gap-2.5 p-2 rounded-full bg-[#f1eef71a] hover:bg-[#f1eef72a] overflow-hidden transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#16121f]"
-            type="button"
-            aria-label="Change language"
-          >
-            <img
-              className="w-6 h-6 aspect-square"
-              alt="Language selector"
-              src={languageWhite}
-            />
+          <button className="p-2 rounded-full bg-[#f1eef71a] hover:bg-[#f1eef72a] transition-colors">
+            <img className="w-6 h-6" src={languageWhite} alt="Language selector" />
           </button>
         </div>
+
+        {/* Mobile burger button */}
+        <button
+          className="md:hidden p-2 rounded-md focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X className="text-white" size={24} /> : <Menu className="text-white" size={24} />}
+        </button>
       </div>
+
+      {/* Mobile dropdown */}
+      {menuOpen && (
+        <div className="md:hidden flex flex-col items-center gap-4 py-4 bg-[#16121f] text-white">
+          {navigationItems.map((item, index) => (
+            <Link
+              key={index}
+              to={item.href}
+              className="text-sm font-semibold hover:text-primitives-brand-primary"
+              onClick={() => setMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <div className="flex gap-3 mt-2">
+            <button className="px-4 py-2 rounded-md bg-[#f1eef71a] hover:bg-[#f1eef72a] text-white">
+              Login
+            </button>
+            <button className="px-4 py-2 rounded-md bg-[#7815F9] text-white">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

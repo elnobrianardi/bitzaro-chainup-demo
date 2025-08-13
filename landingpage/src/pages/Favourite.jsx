@@ -5,6 +5,7 @@ import { lineChartMockData } from "../data/lineChartData";
 import TrendingTable from "../components/TrendingTable";
 import { InsightsSectionDark } from "../components/InsightSectionDark";
 import SearchBar from "../components/SearchBar";
+import FavouriteTable from "../components/FavouriteTable";
 
 const Spot = () => {
   return (
@@ -26,7 +27,7 @@ const Spot = () => {
             <div className="bg-gray-700 rounded-md py-1 px-2">Spot</div>
             <div className="bg-gray-700 rounded-md py-1 px-2">Future</div>
           </div>
-          <TrendingTable />
+          <FavouriteTable/>
           <InsightsSectionDark />
         </section>
       </div>

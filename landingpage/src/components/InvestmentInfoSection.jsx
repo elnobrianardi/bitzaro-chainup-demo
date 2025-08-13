@@ -1,12 +1,12 @@
 import React from "react";
-import icon1 from '../assets/Icon/Your Safety, Our Priority/Icon1.png'
-import icon2 from '../assets/Icon/Your Safety, Our Priority/Icon2.png'
+import icon1 from "../assets/Icon/Your Safety, Our Priority/Icon1.png";
+import icon2 from "../assets/Icon/Your Safety, Our Priority/Icon2.png";
 
 export const InvestmentInfoSection = () => {
   const investmentFeatures = [
     {
       id: 1,
-      icon: icon1, 
+      icon: icon1,
       title: "Registered and Licensed",
       description:
         "Officially registered and supervised by OJK and/or BAPPEBTI, ISO 27001:2022 certified.",
@@ -22,7 +22,7 @@ export const InvestmentInfoSection = () => {
 
   return (
     <section
-      className="flex w-[1178px] items-center gap-[62px] my-8"
+      className="flex flex-col md:flex-row w-full max-w-[1200px] mx-auto items-center md:items-start gap-10 md:gap-[62px] my-8 px-4"
       role="region"
       aria-labelledby="investment-info-heading"
     >
@@ -33,10 +33,10 @@ export const InvestmentInfoSection = () => {
       {investmentFeatures.map((feature) => (
         <article
           key={feature.id}
-          className="flex flex-col items-start gap-4 relative flex-1 grow"
+          className="flex flex-col items-start gap-4 flex-1"
         >
           <div
-            className="inline-flex items-center justify-center gap-2.5 p-2 relative flex-[0_0_auto] rounded-[50px] overflow-hidden"
+            className="inline-flex items-center justify-center p-2 rounded-full overflow-hidden"
             role="img"
             aria-label={`${feature.title} icon`}
           >
@@ -47,11 +47,11 @@ export const InvestmentInfoSection = () => {
             />
           </div>
 
-          <div className="flex flex-col items-start gap-2 relative self-stretch w-full flex-[0_0_auto]">
-            <h3 className="relative w-fit mt-[-1.00px] [font-family:'Roboto-SemiBold',Helvetica] font-semibold text-[#1b1b1b] text-2xl tracking-[0] leading-[30px] whitespace-nowrap">
+          <div className="flex flex-col items-start gap-2 w-full">
+            <h3 className="font-semibold text-[#1b1b1b] text-xl sm:text-2xl leading-[30px]">
               {feature.title}
             </h3>
-            <p className="text-left self-stretch [font-family:'Roboto-Regular',Helvetica] font-normal text-black text-xl leading-[30px] relative tracking-[0]">
+            <p className="text-left font-normal text-black text-base sm:text-xl leading-[30px]">
               {feature.description}
             </p>
           </div>

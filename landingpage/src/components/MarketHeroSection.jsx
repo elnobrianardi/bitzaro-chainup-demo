@@ -1,20 +1,28 @@
-import React from 'react'
-import HeroImage from '../assets/Hero_Section/Image_Inside_Banner_(Hero_Section).png'
+import React from 'react';
+import HeroImage from '../assets/Hero_Section/Image_Inside_Banner_(Hero_Section).png';
+
 const MarketHeroSection = () => {
   return (
-    <div className='flex py-16 items-center justify-center'>
-          <div className='text-white py-16 gap-8'>
-            <h2 className='text-[52px] font-bold'>Welcome to Bitzaro</h2>
-            <p>Engineering the Digital Economy</p>
-            <button className='rounded py-2 px-5 bg-[#7815F9] my-8'>
-              Sign Up
-            </button>
-          </div>
-          <div>
-            <img src={HeroImage} alt="" />
-          </div>
-        </div>
-  )
-}
+    <section className="w-full flex flex-col md:flex-row items-center justify-center py-16 px-4 md:px-8 gap-8 ">
+      {/* Text content */}
+      <div className="flex flex-col items-center md:items-start text-center md:text-left text-white gap-4 md:gap-6 md:w-1/2">
+        <h2 className="text-4xl md:text-[52px] font-bold">Welcome to Bitzaro</h2>
+        <p className="text-lg md:text-xl">Engineering the Digital Economy</p>
+        <button className="rounded py-2 px-5 bg-[#7815F9] mt-4 md:mt-8">
+          Sign Up
+        </button>
+      </div>
 
-export default MarketHeroSection
+      {/* Image */}
+      <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+        <img
+          src={HeroImage}
+          alt="Bitzaro Hero"
+          className="w-full max-w-[500px] h-auto object-contain"
+        />
+      </div>
+    </section>
+  );
+};
+
+export default MarketHeroSection;

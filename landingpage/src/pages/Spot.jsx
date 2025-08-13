@@ -5,6 +5,7 @@ import { lineChartMockData } from "../data/lineChartData";
 import TrendingTable from "../components/TrendingTable";
 import { InsightsSectionDark } from "../components/InsightSectionDark";
 import SearchBar from "../components/SearchBar";
+import SpotTable from "../components/SpotTable";
 
 const Spot = () => {
   return (
@@ -27,7 +28,7 @@ const Spot = () => {
             <div className="bg-gray-700 rounded-md py-1 px-2">USDT</div>
             <div className="bg-gray-700 rounded-md py-1 px-2">BTC</div>
           </div>
-          <TrendingTable />
+          <SpotTable/>
           <InsightsSectionDark />
         </section>
       </div>

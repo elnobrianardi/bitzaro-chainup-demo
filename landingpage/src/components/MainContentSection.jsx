@@ -4,7 +4,7 @@ import arrow from '../assets/Icon/Navigation_Icon_(Profile, Language, Arrow)/arr
 
 export const MainContentSection = () => {
   return (
-    <section className="relative w-full max-w-[574px] h-auto px-4 sm:px-6 md:px-8 pt-6 sm:pt-8 bg-[#a216ff0a] rounded-2xl overflow-visible flex flex-col items-start gap-4 sm:gap-6">
+    <section className="relative w-full h-auto px-4 sm:px-6 md:px-8 pt-6 sm:pt-8 bg-[#a216ff0a] rounded-2xl overflow-visible flex flex-col items-start gap-4 sm:gap-6">
       
       {/* Arrow button at top right */}
       <button

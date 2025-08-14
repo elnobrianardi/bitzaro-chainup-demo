@@ -39,25 +39,36 @@ export const Landing = () => {
 
       {/* Trading Experience */}
       <section className="w-full flex justify-center items-center">
-  <div className="max-w-[1200px] mx-auto py-32 flex flex-col gap-8 px-4">
-    <ContentWrapperSection />
-    <MainContentSection />
+  <div className="max-w-[1200px] w-full py-32 flex flex-col gap-16 px-4">
+    
+    {/* Top section: side by side on md+ */}
+    <div className="flex flex-col lg:flex-row w-full gap-8">
+      <div className="w-full lg:w-1/2">
+        <ContentWrapperSection />
+      </div>
+      <div className="w-full lg:w-1/2">
+        <MainContentSection />
+      </div>
+    </div>
 
     {/* Inner sections */}
-    <div className="w-full max-w-[1200px] mx-auto flex flex-wrap md:flex-nowrap gap-8 justify-center items-start">
-      {/* Left column */}
-      <div className="flex flex-col gap-8 w-full items-center">
+    <div className="flex flex-col lg:flex-row w-full gap-8">
+      
+      {/* Left column: Features + AppOverview */}
+      <div className="flex flex-col gap-8 w-full lg:w-1/2">
         <FeaturesSection />
         <AppOverviewSection />
       </div>
 
-      {/* Right column */}
-      <div className="flex flex-col w-full items-center">
+      {/* Right column: ComponentNode */}
+      <div className="flex flex-col w-full lg:w-1/2">
         <ComponentNodeSection />
       </div>
     </div>
+
   </div>
 </section>
+
 
 
 

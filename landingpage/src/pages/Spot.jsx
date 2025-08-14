@@ -15,7 +15,7 @@ const Spot = () => {
       <NavigationSection />
 
       <div className="flex-grow">
-        <section className="grid gap-4 py-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full max-w-[1200px] mx-auto pt-[120px]">
+        <section className="grid gap-4 py-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full max-w-[1200px] mx-auto pt-[120px]">
           {lineChartMockData.map((item) => (
             <LineChartCard key={item.id} {...item} />
           ))}

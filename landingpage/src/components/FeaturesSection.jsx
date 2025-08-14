@@ -4,11 +4,11 @@ import frame3 from "../assets/Add-On/List_Of_Currency.png";
 
 export const FeaturesSection = () => {
   return (
-    <section className="relative flex flex-col sm:flex-row w-full max-w-full sm:max-w-[574px] items-center gap-4 sm:gap-8 px-4 sm:px-7 py-6  rounded-2xl bg-[linear-gradient(0deg,rgba(246,247,248,1)_0%,rgba(246,247,248,1)_100%),linear-gradient(0deg,rgba(239,242,245,1)_0%,rgba(239,242,245,1)_100%)]">
+    <section className="relative flex flex-col sm:flex-row w-full max-w-full items-center gap-4 sm:gap-8 px-4 sm:px-7 rounded-2xl bg-[linear-gradient(0deg,rgba(246,247,248,1)_0%,rgba(246,247,248,1)_100%),linear-gradient(0deg,rgba(239,242,245,1)_0%,rgba(239,242,245,1)_100%)]">
       
       {/* Button on top right */}
       <button
-        className="absolute top-3 sm:top-4 right-3 sm:right-4 inline-flex items-center gap-2.5 p-2 bg-white rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+        className="absolute top-3 sm:top-4 right-3 sm:right-4 inline-flex items-center gap-2.5 p-1 bg-white rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
         aria-label="Learn more about trading cryptocurrencies"
       >
         <img className="w-5 sm:w-6 h-5 sm:h-6" alt="" src={arrowRightAlt4} />

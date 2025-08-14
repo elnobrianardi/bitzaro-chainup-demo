@@ -4,7 +4,7 @@ import successBuy1 from "../assets/GIF/5186020064e1c2d1d8a3432e146567abe8e7504a.
 
 export const ContentWrapperSection = () => {
   return (
-    <section className="relative w-full max-w-[574px] h-auto sm:h-full p-4 sm:p-7 rounded-2xl overflow-visible bg-[linear-gradient(0deg,rgba(94,255,255,0.08)_0%,rgba(94,255,255,0.08)_100%)]">
+    <section className="relative w-full h-auto sm:h-full px-4 sm:px-6 md:px-8 pt-6 sm:pt-8 rounded-2xl overflow-visible bg-[linear-gradient(0deg,rgba(94,255,255,0.08)_0%,rgba(94,255,255,0.08)_100%)]">
       
       {/* Button positioned top right */}
       <button

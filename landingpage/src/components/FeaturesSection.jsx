@@ -1,6 +1,6 @@
 import React from "react";
 import arrowRightAlt4 from "../assets/Icon/Navigation_Icon_(Profile, Language, Arrow)/arrow_right_alt.png";
-import frame3 from "../assets/Add-On/List_Of_Currency.png";
+import frame3 from "../assets/Add-On/List_of_Currency.png";
 
 export const FeaturesSection = () => {
   return (

@@ -14,8 +14,8 @@ export const FeaturesSection = () => {
         <img className="w-5 sm:w-6 h-5 sm:h-6" alt="" src={arrowRightAlt4} />
       </button>
 
-      {/* Image container with cropping */}
-      <div className="flex justify-center sm:justify-start w-full sm:w-[198px] h-40 sm:h-40 overflow-hidden rounded-xl flex-shrink-0">
+      {/* Image container with responsive shrink */}
+      <div className="flex justify-center sm:justify-start w-full sm:w-[198px] max-w-[200px] sm:max-w-none h-32 sm:h-40 overflow-hidden rounded-xl flex-shrink-0">
         <img
           className="w-full h-full object-cover"
           alt="Cryptocurrency trading illustration"
@@ -24,7 +24,7 @@ export const FeaturesSection = () => {
       </div>
 
       {/* Text */}
-      <h2 className="w-full sm:w-auto font-medium text-[28px] sm:text-[32px] leading-8 sm:leading-10 tracking-[0] text-left">
+      <h2 className="w-full sm:w-auto font-medium text-[24px] sm:text-[32px] leading-7 sm:leading-10 tracking-[0] text-left">
         <span className="text-[#323232]">Trade </span>
         <span className="text-black">300+ cryptos</span>
         <span className="text-[#323232]">

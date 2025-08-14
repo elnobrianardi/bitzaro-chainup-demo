@@ -22,7 +22,10 @@ const Spot = () => {
         </section>
 
         <section className="max-w-[1200px] mx-auto">
-          <SearchBar/>
+          <div className="pt-4">
+            <SearchBar/>
+          </div>
+          
           <div className="flex gap-4 text-gray-300 py-4">
             <div className="bg-gray-700 rounded-md py-1 px-2">Spot</div>
             <div className="bg-gray-700 rounded-md py-1 px-2">Future</div>

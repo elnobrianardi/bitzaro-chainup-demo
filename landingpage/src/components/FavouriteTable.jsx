@@ -16,38 +16,38 @@ const tableData = [
 
 const FavouriteTable = () => {
   return (
-    <div className="py-8 sm:py-16 px-4 sm:px-6">
+    <div className="py-8 sm:py-16">
       <h2 className="text-white text-xl sm:text-2xl mb-4 sm:mb-6">Trending Coins</h2>
       <div className="overflow-x-auto">
         <div className="min-w-max">
           <table className="min-w-full text-white border-collapse">
             <thead>
               <tr>
-                <th className="px-2 sm:px-4 py-2 text-left text-xs sm:text-sm text-gray-500">Coins</th>
-                <th className="px-2 sm:px-4 py-2 text-left text-xs sm:text-sm text-gray-500">Last Price</th>
-                <th className="px-2 sm:px-4 py-2 text-left text-xs sm:text-sm text-gray-500 hidden sm:table-cell">High</th>
-                <th className="px-2 sm:px-4 py-2 text-left text-xs sm:text-sm text-gray-500 hidden sm:table-cell">Low</th>
-                <th className="px-2 sm:px-4 py-2 text-left text-xs sm:text-sm text-gray-500">Change</th>
-                <th className="px-2 sm:px-4 py-2 text-left text-xs sm:text-sm text-gray-500 hidden md:table-cell">24H Turnover</th>
-                <th className="px-2 sm:px-4 py-2 text-right text-xs sm:text-sm text-gray-500">Action</th>
+                <th className=" py-2 text-left text-xs sm:text-sm text-gray-500">Coins</th>
+                <th className=" py-2 text-left text-xs sm:text-sm text-gray-500">Last Price</th>
+                <th className=" py-2 text-left text-xs sm:text-sm text-gray-500 hidden sm:table-cell">High</th>
+                <th className=" py-2 text-left text-xs sm:text-sm text-gray-500 hidden sm:table-cell">Low</th>
+                <th className=" py-2 text-left text-xs sm:text-sm text-gray-500">Change</th>
+                <th className=" py-2 text-left text-xs sm:text-sm text-gray-500 hidden md:table-cell">24H Turnover</th>
+                <th className=" py-2 text-right text-xs sm:text-sm text-gray-500">Action</th>
               </tr>
             </thead>
             <tbody>
               {tableData.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-700">
-                  <td className="px-2 sm:px-4 py-2">
+                  <td className=" py-2">
                     <div className="flex gap-2 sm:gap-3 items-center">
                       <img src={starYellow} alt="" className="w-4 h-4 sm:w-4 sm:h-4" />
                       <img src={row.src} className="w-6 h-6 sm:w-7 sm:h-7" alt="" />
                       <span className="text-xs sm:text-sm">{row.coin}</span>
                     </div>
                   </td>
-                  <td className="px-2 sm:px-4 py-2 text-xs sm:text-sm">{row.price}</td>
-                  <td className="px-2 sm:px-4 py-2 text-xs sm:text-sm hidden sm:table-cell">{row.high}</td>
-                  <td className="px-2 sm:px-4 py-2 text-xs sm:text-sm hidden sm:table-cell">{row.low}</td>
-                  <td className={`px-2 sm:px-4 py-2 text-xs sm:text-sm font-medium ${row.changeColor}`}>{row.change}</td>
-                  <td className="px-2 sm:px-4 py-2 text-xs sm:text-sm hidden md:table-cell">{row.turnover}</td>
-                  <td className="px-2 sm:px-4 py-2 text-right text-xs sm:text-sm text-[#913DFF] cursor-pointer hover:underline">Trade</td>
+                  <td className=" py-2 text-xs sm:text-sm">{row.price}</td>
+                  <td className=" py-2 text-xs sm:text-sm hidden sm:table-cell">{row.high}</td>
+                  <td className=" py-2 text-xs sm:text-sm hidden sm:table-cell">{row.low}</td>
+                  <td className={` py-2 text-xs sm:text-sm font-medium ${row.changeColor}`}>{row.change}</td>
+                  <td className=" py-2 text-xs sm:text-sm hidden md:table-cell">{row.turnover}</td>
+                  <td className=" py-2 text-right text-xs sm:text-sm text-[#913DFF] cursor-pointer hover:underline">Trade</td>
                 </tr>
               ))}
             </tbody>

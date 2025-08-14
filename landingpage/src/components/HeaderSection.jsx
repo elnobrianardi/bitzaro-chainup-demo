@@ -38,7 +38,7 @@ export const HeaderSection = () => {
         <div className="flex items-center gap-6">
           <Link to="/">
             <img
-              className="h-10 object-contain"
+              className="h-10 object-contain mb-2"
               alt="Bitzaro logo"
               src={scrolled ? bitzaroLogoBlack : bitzaroLogoWhite}
             />

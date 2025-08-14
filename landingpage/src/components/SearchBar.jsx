@@ -34,7 +34,7 @@ const SearchBar = () => {
   }, [activeTab]);
 
   return (
-    <div className="flex justify-between py-1 border-b border-gray-500 relative mx-auto">
+    <div className="flex justify-between border-b border-gray-500 relative mx-auto">
       <div className="flex text-gray-200 gap-6 w-full relative">
         {tabs.map(({ label, path }, index) =>
           path ? (
@@ -75,7 +75,7 @@ const SearchBar = () => {
         />
       </div>
 
-      <div className="bg-[#F1EEF71A] rounded-full p-1 ml-6">
+      <div className="bg-[#F1EEF71A] rounded-full px-1 pt-1 ml-6">
         <div className="flex gap-3 justify-center items-center">
           <img src={search} className="w-[15px] h-[15px] my-2 ml-4" alt="" />
           <p className="text-gray-200 mr-24">Search</p>

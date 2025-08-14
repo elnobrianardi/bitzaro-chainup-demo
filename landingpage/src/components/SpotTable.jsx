@@ -125,7 +125,7 @@ const SpotTable = () => {
   };
 
   return (
-    <div className="py-8 sm:py-16 px-4 sm:px-6">
+    <div className="py-8">
       <h2 className="text-white text-xl sm:text-2xl mb-4 sm:mb-6">
         Trending Coins
       </h2>
@@ -138,25 +138,25 @@ const SpotTable = () => {
           <table className="min-w-full text-white border-collapse">
             <thead>
               <tr>
-                <th className="px-2 sm:px-4 py-2 text-left text-xs sm:text-sm text-gray-500">
+                <th className="py-2 text-left text-xs sm:text-sm text-gray-500">
                   Coins
                 </th>
-                <th className="px-2 sm:px-4 py-2 text-left text-xs sm:text-sm text-gray-500">
+                <th className=" py-2 text-left text-xs sm:text-sm text-gray-500">
                   Last Price
                 </th>
-                <th className="px-2 sm:px-4 py-2 text-left text-xs sm:text-sm text-gray-500 hidden sm:table-cell">
+                <th className=" py-2 text-left text-xs sm:text-sm text-gray-500 hidden sm:table-cell">
                   High
                 </th>
-                <th className="px-2 sm:px-4 py-2 text-left text-xs sm:text-sm text-gray-500 hidden sm:table-cell">
+                <th className=" py-2 text-left text-xs sm:text-sm text-gray-500 hidden sm:table-cell">
                   Low
                 </th>
-                <th className="px-2 sm:px-4 py-2 text-left text-xs sm:text-sm text-gray-500">
+                <th className=" py-2 text-left text-xs sm:text-sm text-gray-500">
                   Change
                 </th>
-                <th className="px-2 sm:px-4 py-2 text-left text-xs sm:text-sm text-gray-500 hidden md:table-cell">
+                <th className=" py-2 text-left text-xs sm:text-sm text-gray-500 hidden md:table-cell">
                   24H Turnover
                 </th>
-                <th className="px-2 sm:px-4 py-2 text-right text-xs sm:text-sm text-gray-500">
+                <th className=" py-2 text-right text-xs sm:text-sm text-gray-500">
                   Action
                 </th>
               </tr>
@@ -164,7 +164,7 @@ const SpotTable = () => {
             <tbody>
               {tableData.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-700">
-                  <td className="px-2 sm:px-4 py-2">
+                  <td className=" py-2">
                     <div className="flex gap-2 sm:gap-3 items-center">
                       <img
                         src={liked[idx] ? starYellow : star}
@@ -180,24 +180,24 @@ const SpotTable = () => {
                       <span className="text-xs sm:text-sm">{row.coin}</span>
                     </div>
                   </td>
-                  <td className="px-2 sm:px-4 py-2 text-xs sm:text-sm">
+                  <td className=" py-2 text-xs sm:text-sm">
                     {row.price}
                   </td>
-                  <td className="px-2 sm:px-4 py-2 text-xs sm:text-sm hidden sm:table-cell">
+                  <td className=" py-2 text-xs sm:text-sm hidden sm:table-cell">
                     {row.high}
                   </td>
-                  <td className="px-2 sm:px-4 py-2 text-xs sm:text-sm hidden sm:table-cell">
+                  <td className=" py-2 text-xs sm:text-sm hidden sm:table-cell">
                     {row.low}
                   </td>
                   <td
-                    className={`px-2 sm:px-4 py-2 text-xs sm:text-sm font-medium ${row.changeColor}`}
+                    className={` py-2 text-xs sm:text-sm font-medium ${row.changeColor}`}
                   >
                     {row.change}
                   </td>
-                  <td className="px-2 sm:px-4 py-2 text-xs sm:text-sm hidden md:table-cell">
+                  <td className=" py-2 text-xs sm:text-sm hidden md:table-cell">
                     {row.turnover}
                   </td>
-                  <td className="px-2 sm:px-4 py-2 text-right text-xs sm:text-sm text-[#913DFF] cursor-pointer hover:underline">
+                  <td className=" py-2 text-right text-xs sm:text-sm text-[#913DFF] cursor-pointer hover:underline">
                     Trade
                   </td>
                 </tr>

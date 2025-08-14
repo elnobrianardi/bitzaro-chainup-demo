@@ -20,7 +20,7 @@ export const NavigationSection = () => {
         <div className="flex items-center gap-6">
           <Link to="/">
             <img
-              className="h-10 object-contain"
+              className="h-10 object-contain mb-2"
               src={bitzaroLogoWhite}
               alt="Bitzaro logo"
             />

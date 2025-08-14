@@ -29,7 +29,7 @@ export const InsightsSectionDark = () => {
   };
 
   return (
-    <footer className="max-w-[1200px] mx-auto px-6 sm:px-12 py-10 flex xl:flex-row flex-col gap-10 text-white">
+    <footer className="max-w-[1200px] mx-autopy-10 flex xl:flex-row flex-col gap-10 text-white pb-8">
       
       {/* Logo + Address + Button centered */}
       <div className="flex flex-col items-center gap-6 text-center">

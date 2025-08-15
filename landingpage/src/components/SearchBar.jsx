@@ -34,8 +34,9 @@ const SearchBar = () => {
   }, [activeTab]);
 
   return (
-    <div className="flex justify-between border-b border-gray-500 relative mx-auto">
-      <div className="flex text-gray-200 gap-6 w-full relative">
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-gray-500 relative w-full gap-4 sm:gap-0">
+      {/* Tabs */}
+      <div className="flex text-gray-200 gap-6 w-full sm:w-auto relative">
         {tabs.map(({ label, path }, index) =>
           path ? (
             <Link key={label} to={path} onClick={() => handleClick(path)}>
@@ -62,23 +63,35 @@ const SearchBar = () => {
           )
         )}
 
-        {/* Purple underline exactly on the gray border */}
+        {/* Purple underline */}
         <span
           className="absolute bg-[#913DFF] transition-all duration-300"
           style={{
             left: underlineStyle.left,
             width: underlineStyle.width,
-            height: "2px",
+            height: "4px",
             bottom: "0px",
             zIndex: 10,
           }}
         />
       </div>
 
-      <div className="bg-[#F1EEF71A] rounded-full px-1 pt-1 ml-6">
-        <div className="flex gap-3 justify-center items-center">
-          <img src={search} className="w-[15px] h-[15px] my-2 ml-4" alt="" />
-          <p className="text-gray-200 mr-24">Search</p>
+      {/* Search */}
+      <div
+        className="
+          bg-[#F1EEF71A] 
+          rounded-full 
+          px-1 pt-1 
+          flex-1 sm:flex-none 
+          mb-2 sm:mb-0 
+          sm:w-[280px] lg:w-[160px] 
+        "
+      >
+        <div className="flex gap-2 items-center">
+          <img src={search} className="w-[15px] h-[15px] ml-3 mb-1" alt="search" />
+          <p className="text-gray-200 flex-1 sm:flex-none pr-8 lg:pr-8 mb-1">
+            Search
+          </p>
         </div>
       </div>
     </div>

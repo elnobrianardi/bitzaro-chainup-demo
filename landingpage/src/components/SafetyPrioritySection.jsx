@@ -22,7 +22,7 @@ export const SafetyPrioritySection = () => {
 
   return (
     <section
-      className="flex flex-col md:flex-row w-full max-w-[1200px] mx-auto items-center md:items-start gap-10 md:gap-[62px] px-4"
+      className="flex flex-col md:flex-row w-full max-w-[1200px] mx-auto items-start gap-10 md:gap-[62px] px-4"
       aria-labelledby="safety-priority-heading"
     >
       <h2 id="safety-priority-heading" className="sr-only">
@@ -40,7 +40,6 @@ export const SafetyPrioritySection = () => {
             src={feature.icon}
             role="img"
           />
-
           <div className="flex flex-col items-start gap-2 w-full">
             <h3 className="font-semibold text-[#1b1b1b] text-xl sm:text-2xl leading-[30px]">
               {feature.title}

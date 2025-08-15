@@ -2,7 +2,6 @@ import React from "react";
 import { NavigationSection } from "../components/NavigationSection";
 import LineChartCard from "../components/LineChartCard";
 import { lineChartMockData } from "../data/lineChartData";
-import TrendingTable from "../components/TrendingTable";
 import { InsightsSectionDark } from "../components/InsightSectionDark";
 import SearchBar from "../components/SearchBar";
 import SpotTable from "../components/SpotTable";
@@ -13,22 +12,25 @@ const Spot = () => {
       <NavigationSection />
 
       <div className="flex-grow">
-        <section className="grid gap-4 py-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full max-w-[1200px] mx-auto pt-[120px]">
+        {/* Chart grid */}
+        <section className="grid gap-4 p-4 pt-[120px] grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full max-w-[1200px] mx-auto">
           {lineChartMockData.map((item) => (
             <LineChartCard key={item.id} {...item} />
           ))}
         </section>
 
-        <section className="max-w-[1200px] mx-auto">
+        {/* Search + Filter + Table */}
+        <section className="max-w-[1200px] mx-auto px-4">
           <div className="pt-4">
             <SearchBar />
           </div>
 
-          <div className="flex gap-4 text-gray-300 pt-4 pb-8">
-            <div className="bg-gray-700 rounded-md py-1 px-2">All Market</div>
-            <div className="bg-gray-700 rounded-md py-1 px-2">USDT</div>
-            <div className="bg-gray-700 rounded-md py-1 px-2">BTC</div>
+          <div className="flex flex-wrap gap-2 text-gray-300 pt-4 pb-8">
+            <div className="bg-gray-700 rounded-md py-1 px-3">All Market</div>
+            <div className="bg-gray-700 rounded-md py-1 px-3">USDT</div>
+            <div className="bg-gray-700 rounded-md py-1 px-3">BTC</div>
           </div>
+
           <SpotTable />
           <InsightsSectionDark />
         </section>

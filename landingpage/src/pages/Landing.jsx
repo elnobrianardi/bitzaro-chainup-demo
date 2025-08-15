@@ -39,44 +39,36 @@ export const Landing = () => {
 
       {/* Trading Experience */}
       <section className="w-full flex justify-center items-center">
-  <div className="max-w-[1200px] w-full py-32 flex flex-col gap-16 px-4">
-    
-    {/* Top section: side by side on md+ */}
-    <div className="flex flex-col lg:flex-row w-full gap-8">
-      <div className="w-full lg:w-1/2">
-        <ContentWrapperSection />
-      </div>
-      <div className="w-full lg:w-1/2">
-        <MainContentSection />
-      </div>
-    </div>
+        <div className="max-w-[1200px] w-full py-24 flex flex-col gap-16 px-4">
+          {/* Top section: side by side on md+ */}
+          <div className="flex flex-col lg:flex-row w-full gap-8">
+            <div className="w-full lg:w-1/2">
+              <ContentWrapperSection />
+            </div>
+            <div className="w-full lg:w-1/2">
+              <MainContentSection />
+            </div>
+          </div>
 
-    {/* Inner sections */}
-    <div className="flex flex-col lg:flex-row w-full gap-8">
-      
-      {/* Left column: Features + AppOverview */}
-      <div className="flex flex-col gap-8 w-full lg:w-1/2">
-        <FeaturesSection />
-        <AppOverviewSection />
-      </div>
+          {/* Inner sections */}
+          <div className="flex flex-col lg:flex-row w-full gap-8">
+            {/* Left column: Features + AppOverview */}
+            <div className="flex flex-col gap-8 w-full lg:w-1/2">
+              <FeaturesSection />
+              <AppOverviewSection />
+            </div>
 
-      {/* Right column: ComponentNode */}
-      <div className="flex flex-col w-full lg:w-1/2">
-        <ComponentNodeSection />
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
+            {/* Right column: ComponentNode */}
+            <div className="flex flex-col w-full lg:w-1/2">
+              <ComponentNodeSection />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Ultimate Web Trading Experience */}
       <section className="w-full bg-white">
-        <div className="max-w-[1200px] mx-auto text-center pb-16 px-4">
+        <div className="max-w-[1200px] mx-auto text-center py-8 px-4">
           <h2 className="text-5xl font-extrabold">
             The Ultimate Web <br /> Trading Experience
           </h2>
@@ -96,14 +88,14 @@ export const Landing = () => {
 
       {/* Community Section - background */}
       <section className="w-full bg-gray-150">
-        <div className="mx-auto py-16 px-4">
+        <div className="mx-auto pt-8 pb-16">
           <CommunitySection />
         </div>
       </section>
 
       {/* Bitcoin Investment */}
       <section className="w-full">
-        <div className="max-w-[1200px] mx-auto py-16 px-4">
+        <div className="max-w-[1200px] mx-auto py-16">
           <div className="flex gap-4 items-start">
             <h2 className="text-5xl font-extrabold pb-16 text-left">
               If you'd invested in <span className="underline">Bitcoin</span>

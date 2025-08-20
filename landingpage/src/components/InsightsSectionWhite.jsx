@@ -53,7 +53,7 @@ export const InsightsSection = () => {
       </div>
 
       {/* Footer Links in 2-column grid on small screens, 4 columns on larger screens */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
         {Object.entries(footerData).map(([section, links]) => (
           <nav
             key={section}

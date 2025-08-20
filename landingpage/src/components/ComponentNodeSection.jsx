@@ -16,12 +16,12 @@ export const ComponentNodeSection = () => {
 
       {/* Text content */}
       <div className="flex flex-col items-start gap-2.5 p-6 sm:p-8 w-full z-10">
-        <h2 className="text-[28px] sm:text-[32px] leading-8 sm:leading-10 font-medium text-[#323232] tracking-[0]">
+        <h2 className="text-[28px] sm:text-[30px] leading-8 sm:leading-10 font-medium text-[#323232] tracking-[0]">
           <span className="font-medium text-[#323232]">
-            Get a bonus every hour with&nbsp;&nbsp;Bitzaro Earn{" "}
+            Get a bonus every hour with <br />Bitzaro Earn{" "}
           </span>
           <span className="font-medium text-[#1761f5]">up to</span>
-          <span className="font-bold text-[#1761f5] text-[42px] sm:text-[42px] leading-[35px] sm:leading-[52.5px]">&nbsp;25%</span>
+          <span className="font-bold text-[#1761f5] text-[42px] sm:text-[40px] leading-[35px] sm:leading-[52.5px]">&nbsp;25%</span>
           <span className="font-medium text-[#1761f5]"> APY</span>
         </h2>
       </div>

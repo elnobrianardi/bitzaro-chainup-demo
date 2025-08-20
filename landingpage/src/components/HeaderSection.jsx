@@ -13,7 +13,7 @@ export const HeaderSection = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const triggerHeight = 200;
+      const triggerHeight = window.innerHeight * 0.7;
       setScrolled(scrollTop > triggerHeight);
     };
 
@@ -30,7 +30,7 @@ export const HeaderSection = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full backdrop-blur-[5px] transition-colors duration-300 z-50 ${
-        scrolled ? "bg-white shadow-md" : "bg-[#16121f]"
+        scrolled ? "bg-white/70 shadow-md" : "bg-[#16121f]"
       } py-4`}
     >
       <div className="max-w-[1200px] w-full mx-auto flex justify-between items-center px-4">
@@ -66,7 +66,7 @@ export const HeaderSection = () => {
             className={`px-4 py-2 rounded-md transition-colors ${
               scrolled
                 ? "bg-gray-300 text-black"
-                : "bg-[#f1eef71a] text-white hover:bg-[#f1eef72a]"
+                : "bg-[#F1EEF71A] text-white hover:bg-[#f1eef72a]"
             }`}
           >
             Login

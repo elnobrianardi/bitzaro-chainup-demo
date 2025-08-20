@@ -19,7 +19,7 @@ export const ContentWrapperSection = () => {
           ❘ Beginner Friendly
         </div>
 
-        <h2 className="w-full sm:w-fit font-medium text-[#323232] text-2xl sm:text-[32px] leading-8 sm:leading-10 tracking-[0]">
+        <h2 className="w-full sm:w-fit font-medium text-[#323232] text-2xl sm:text-[31px] [@media(min-width:1024px)_and_(max-width:1192px)]:text-[25px] leading-8 sm:leading-10 tracking-[0]">
           The simplest way to trade, <br />
           perfect for beginner
         </h2>

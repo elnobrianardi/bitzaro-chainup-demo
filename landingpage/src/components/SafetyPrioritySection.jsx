@@ -1,6 +1,6 @@
 import React from "react";
-import custodian from "../assets/Icon/Your Safety, Our Priority/Icon4.png";
-import biometric from "../assets/Icon/Your Safety, Our Priority/Icon3.png";
+import custodian from "../assets/Icon/Your Safety, Our Priority/fingerprint 1.png";
+import biometric from "../assets/Icon/Your Safety, Our Priority/Savings 1.png";
 
 export const SafetyPrioritySection = () => {
   const safetyFeatures = [
@@ -35,7 +35,7 @@ export const SafetyPrioritySection = () => {
           className="flex flex-col items-start gap-4 flex-1"
         >
           <img
-            className="h-[58px] w-[58px]"
+            className="h-10 w-10"
             alt={`${feature.title} icon`}
             src={feature.icon}
             role="img"

@@ -1,6 +1,6 @@
 import React from "react";
-import icon1 from "../assets/Icon/Your Safety, Our Priority/Icon1.png";
-import icon2 from "../assets/Icon/Your Safety, Our Priority/Icon2.png";
+import icon1 from "../assets/Icon/Your Safety, Our Priority/license 1.png";
+import icon2 from "../assets/Icon/Your Safety, Our Priority/shield_toggle 1.png";
 
 export const InvestmentInfoSection = () => {
   const investmentFeatures = [
@@ -36,12 +36,12 @@ export const InvestmentInfoSection = () => {
           className="flex flex-col items-start gap-4 flex-1"
         >
           <div
-            className="inline-flex items-center justify-center p-2 rounded-full overflow-hidden"
+            className="inline-flex items-center justify-center rounded-full overflow-hidden"
             role="img"
             aria-label={`${feature.title} icon`}
           >
             <img
-              className="w-[58px] h-[58px]"
+              className="w-10 h-10"
               src={feature.icon}
               alt={`${feature.title} icon`}
             />

@@ -71,7 +71,7 @@ export const CryptoInsightsSection = () => {
             >
               Explore Bitzaro Academy
             </a>
-            <img src={purpleArrow} className="w-3 h-4 ml-2" alt="" />
+            <img src={purpleArrow} className="w-2 h-3 ml-2 mt-1" alt="" />
           </footer>
         </article>
 
@@ -97,7 +97,7 @@ export const CryptoInsightsSection = () => {
                 </article>
 
                 {index < newsItems.length - 1 && (
-                  <div className="border-t-2 border-dotted border-[#dcdcdc] my-2"></div>
+                  <div className="border-t-2 border-dotted border-[#dcdcdc]"></div>
                 )}
               </React.Fragment>
             ))}
@@ -110,7 +110,7 @@ export const CryptoInsightsSection = () => {
             >
               Read More on Bitzaro News
             </a>
-            <img src={purpleArrow} className="w-3 h-4 ml-2" alt="" />
+            <img src={purpleArrow} className="w-2 h-3 ml-2 mt-1" alt="" />
           </footer>
         </aside>
       </div>

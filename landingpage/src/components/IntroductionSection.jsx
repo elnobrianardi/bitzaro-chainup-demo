@@ -4,25 +4,24 @@ import phoneMockUp from "../assets/Phone_MockUp/PhoneMockUp.png";
 
 export const IntroductionSection = () => {
   return (
-    <section className="relative w-full pt-2 bg-[#16121f] overflow-hidden">
+    <section className="relative w-full min-h-screen pt-20 bg-[#16121f] overflow-hidden">
       {/* Background Image */}
       <img
         src={heroSection}
         alt="Background gradient overlay"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain"
       />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#121126]" />
+      {/* Main Gradient Overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,17,38,0)_34.38%,#121126_85.78%)]" />
 
       {/* Inner content wrapper */}
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between min-h-[650px] gap-4 py-12">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between min-h-[650px] py-8 gap-10">
           {/* Text */}
-          <div className="text-white w-full md:max-w-lg text-center md:text-left">
-            <h1 className="font-black text-[32px] sm:text-[38px] md:text-[52px] leading-tight">
-              Trade Crypto only{" "}
-              <br className="hidden sm:block" /> on Bitzaro
+          <div className="flex-1 text-white text-center md:text-left mt-6 md:mt-0">
+            <h1 className="font-black text-[32px] sm:text-[38px] md:text-[52px] lg:text-[62px] leading-tight">
+              Trade Crypto only <br className="hidden sm:block" /> on Bitzaro
             </h1>
             <p className="mt-4 text-base sm:text-lg md:text-xl text-[#e1e1e1] leading-relaxed">
               Industry-grade infrastructure empowers you to{" "}
@@ -37,13 +36,16 @@ export const IntroductionSection = () => {
             </button>
           </div>
 
-          {/* Phone Mockup */}
-          <div className="w-full flex justify-center md:justify-end">
+          {/* Phone Mockup with its own gradient */}
+          <div className="flex-1 flex justify-center md:justify-end relative">
+            {/* Phone Image */}
             <img
               src={phoneMockUp}
               alt="Mobile phones showing crypto trading interface"
-              className="w-[250px] sm:w-[300px] md:w-[450px] h-auto object-contain"
+              className="relative z-10 w-[200px] sm:w-[280px] md:w-[400px] lg:w-[583px] h-auto object-contain"
             />
+            {/* Bottom Gradient Overlay (in front of phone bottom) */}
+            <div className="absolute hidden md:block bottom-0 w-full h-1/5 bg-gradient-to-t from-[#121126] via-[#121126]/95 to-transparent z-20 pointer-events-none" />
           </div>
         </div>
       </div>

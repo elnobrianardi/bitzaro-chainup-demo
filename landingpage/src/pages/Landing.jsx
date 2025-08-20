@@ -22,7 +22,7 @@ export const Landing = () => {
       <HeaderSection />
 
       {/* Hero Section - full width */}
-      <section className="w-full py-8">
+      <section className="w-full flex items-center">
         <IntroductionSection />
       </section>
 
@@ -39,7 +39,7 @@ export const Landing = () => {
 
       {/* Trading Experience */}
       <section className="w-full flex justify-center items-center">
-        <div className="max-w-[1200px] w-full py-24 flex flex-col gap-16 px-4">
+        <div className="max-w-[1200px] w-full py-24 flex flex-col gap-8 px-4">
           {/* Top section: side by side on md+ */}
           <div className="flex flex-col lg:flex-row w-full gap-8">
             <div className="w-full lg:w-1/2">
@@ -113,8 +113,8 @@ export const Landing = () => {
 
       {/* Safety & Investment */}
       <section className="w-full bg-white">
-        <div className="max-w-[1200px] mx-auto text-center py-16 px-4">
-          <h2 className="text-5xl font-extrabold mt-12">
+        <div className="max-w-[1200px] mx-auto py-16 px-4">
+          <h2 className="text-5xl font-extrabold mt-12 pb-14">
             Your Safety, Our Priority
           </h2>
           <InvestmentInfoSection />
@@ -123,7 +123,7 @@ export const Landing = () => {
       </section>
 
       {/* Crypto Insights - background */}
-      <section className="w-full bg-gray-50">
+      <section className="w-full">
         <div className="max-w-[1200px] mx-auto text-center py-16 px-4">
           <h2 className="text-5xl font-extrabold mb-16 text-left">
             Crypto Latest Insights

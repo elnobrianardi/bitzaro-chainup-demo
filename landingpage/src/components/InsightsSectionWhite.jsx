@@ -30,11 +30,10 @@ export const InsightsSection = () => {
 
   return (
     <footer className="max-w-[1200px] mx-auto px-6 sm:px-12 py-10 flex xl:flex-row flex-col gap-10">
-      
-      {/* Logo + Address + Button centered */}
-      <div className="flex flex-col items-center gap-6 text-center">
+      {/* Logo + Address + Button */}
+      <div className="flex flex-col gap-6 text-left">
         <img
-          className="w-[122px] h-6 object-contain"
+          className="w-[122px] h-auto"
           alt="Bitzaro logo"
           src={bitzaroLogoBlack}
         />
@@ -47,13 +46,13 @@ export const InsightsSection = () => {
           Kowloon, Hong Kong
         </address>
 
-        <button className="px-4 py-2 bg-[#7815F9] rounded-md text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
+        <button className="w-fit self-start px-4 py-2 bg-[#7815F9] rounded-md text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
           Download Bitzaro App
         </button>
       </div>
 
       {/* Footer Links in 2-column grid on small screens, 4 columns on larger screens */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-left">
         {Object.entries(footerData).map(([section, links]) => (
           <nav
             key={section}

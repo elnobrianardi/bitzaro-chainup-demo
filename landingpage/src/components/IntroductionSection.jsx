@@ -50,7 +50,7 @@ export const IntroductionSection = () => {
         </div>
       </div>
       {/* Bottom Gradient Overlay (in front of phone bottom) */}
-      <div className="absolute hidden md:block bottom-60 w-full h-1/5 bg-gradient-to-t from-[#121128] via-[#121128]/95 to-transparent z-20 pointer-events-none" />
+      <div className="absolute hidden md:block bottom-60 w-full h-1/5 bg-gradient-to-t from-[#121128] via-[#121128]/98 to-transparent z-20 pointer-events-none" />
     </section>
   );
 };

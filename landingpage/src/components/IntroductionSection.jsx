@@ -4,7 +4,7 @@ import phoneMockUp from "../assets/Phone_MockUp/PhoneMockUp.png";
 
 export const IntroductionSection = () => {
   return (
-    <section className="relative w-full min-h-screen pt-20 bg-[#16121f] overflow-hidden">
+    <section className="relative w-full min-h-[110vh] pt-20 bg-[#16121f] overflow-hidden">
       {/* Background Image */}
       <img
         src={heroSection}

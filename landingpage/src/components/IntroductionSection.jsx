@@ -4,7 +4,7 @@ import phoneMockUp from "../assets/Phone_MockUp/PhoneMockUp.png";
 
 export const IntroductionSection = () => {
   return (
-    <section className="relative w-full min-h-[110vh] pt-20 bg-[#16121f] overflow-hidden">
+    <section className="relative w-full min-h-[110vh] pt-30 bg-[#16121f] overflow-hidden">
       {/* Background Image */}
       <img
         src={heroSection}
@@ -50,7 +50,7 @@ export const IntroductionSection = () => {
         </div>
       </div>
       {/* Bottom Gradient Overlay (in front of phone bottom) */}
-      <div className="absolute hidden md:block bottom-60 w-full h-1/5 bg-gradient-to-t from-[#121128] via-[#121128]/98 to-transparent z-20 pointer-events-none" />
+      <div className="absolute hidden md:block bottom-50 w-full h-1/5 bg-gradient-to-t from-[#121128] via-[#121128]/98 to-transparent z-20 pointer-events-none" />
     </section>
   );
 };

@@ -19,7 +19,7 @@ export const IntroductionSection = () => {
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between min-h-[650px] py-8 gap-10">
           {/* Text */}
-          <div className="flex-1 text-white text-center md:text-left mt-6 md:mt-0">
+          <div className="flex-1 text-white text-center md:text-left mt-6 md:-mt-[32px]">
             <h1 className="font-black text-[32px] sm:text-[38px] md:text-[52px] lg:text-[62px] leading-tight">
               Trade Crypto only <br className="hidden sm:block" /> on Bitzaro
             </h1>

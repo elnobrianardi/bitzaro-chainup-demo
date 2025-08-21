@@ -9,28 +9,80 @@ import purpleArrow from "../assets/Icon/Arrow/Vector.png";
 
 export const CryptoInsightsSection = () => {
   const academyArticles = [
-    { id: 1, image: x33781, title: "Weekly Signal Bitzaro X Volubit – July 16, 2025", alt: "Element" },
-    { id: 2, image: VrTrading21, title: "Market Analysis Jul 14th, 2025: Bitcoin Continues to Hit New All-Time Highs, Targeting $136k in July", alt: "Element vr trading" },
-    { id: 3, image: defi1, title: "Top DeFi Lending Protocols in Web3: Strategies, Benefits & Crypto Loan Risks", alt: "Defi" },
-    { id: 4, image: defi12, title: "Top DeFi Lending Protocols in Web3: Strategies, Benefits & Crypto Loan Risks", alt: "Defi" },
-    { id: 5, image: x337812, title: "Weekly Signal Bitzaro X Volubit – July 16, 2025", alt: "Element" },
-    { id: 6, image: VrTrading212, title: "Market Analysis Jul 14th, 2025: Bitcoin Continues to Hit New All-Time Highs, Targeting $136k in July", alt: "Element vr trading" },
+    {
+      id: 1,
+      image: x33781,
+      title: "Weekly Signal Bitzaro X Volubit – July 16, 2025",
+      alt: "Element",
+    },
+    {
+      id: 2,
+      image: VrTrading21,
+      title:
+        "Market Analysis Jul 14th, 2025: Bitcoin Continues to Hit New All-Time Highs, Targeting $136k in July",
+      alt: "Element vr trading",
+    },
+    {
+      id: 3,
+      image: defi1,
+      title:
+        "Top DeFi Lending Protocols in Web3: Strategies, Benefits & Crypto Loan Risks",
+      alt: "Defi",
+    },
+    {
+      id: 4,
+      image: defi12,
+      title:
+        "Top DeFi Lending Protocols in Web3: Strategies, Benefits & Crypto Loan Risks",
+      alt: "Defi",
+    },
+    {
+      id: 5,
+      image: x337812,
+      title: "Weekly Signal Bitzaro X Volubit – July 16, 2025",
+      alt: "Element",
+    },
+    {
+      id: 6,
+      image: VrTrading212,
+      title:
+        "Market Analysis Jul 14th, 2025: Bitcoin Continues to Hit New All-Time Highs, Targeting $136k in July",
+      alt: "Element vr trading",
+    },
   ];
 
   const newsItems = [
-    { id: 1, title: "DOGE Rockets 5% Today — Will This Rally Turn Into a Wild Ride?" },
-    { id: 2, title: "3 Crypto that Moves Up You Should Watch Tomorrow Friday July 18, 2025" },
-    { id: 3, title: "Bitcoin Holds Strong at $118K — Is a Break Above $150K Coming If the GENIUS Act Passes?" },
-    { id: 4, title: "Ethereum Skyrockets to $3.350 Today — Is This the Start of ETH's Next Massive Bull Run?" },
-    { id: 5, title: "What are Commodity Futures: Examples of Usage, How They Work, and Futures in the Crypto World" },
+    {
+      id: 1,
+      title: "DOGE Rockets 5% Today — Will This Rally Turn Into a Wild Ride?",
+    },
+    {
+      id: 2,
+      title:
+        "3 Crypto that Moves Up You Should Watch Tomorrow Friday July 18, 2025",
+    },
+    {
+      id: 3,
+      title:
+        "Bitcoin Holds Strong at $118K — Is a Break Above $150K Coming If the GENIUS Act Passes?",
+    },
+    {
+      id: 4,
+      title:
+        "Ethereum Skyrockets to $3.350 Today — Is This the Start of ETH's Next Massive Bull Run?",
+    },
+    {
+      id: 5,
+      title:
+        "What are Commodity Futures: Examples of Usage, How They Work, and Futures in the Crypto World",
+    },
   ];
 
   return (
     <section className="w-full bg-white">
-      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-stretch gap-8 px-4 py-12 text-left">
-        
+      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-stretch gap-8 py-8 text-left">
         {/* Academy */}
-        <article className="flex flex-col gap-5 p-6 flex-[2.75] bg-white rounded-lg">
+        <article className="flex flex-col gap-5 py-6 flex-[2.75] bg-white rounded-lg">
           <header className="flex flex-col gap-2">
             <h2 className="text-2xl font-medium text-black mb-2">
               ❘ Bitzaro Academy
@@ -76,18 +128,18 @@ export const CryptoInsightsSection = () => {
         </article>
 
         {/* News */}
-        <aside className="flex flex-col gap-7 p-6 flex-[1.25] rounded-2xl border border-[#dcdcdc] bg-white">
-          <header className="flex flex-col gap-2">
+        <aside className="flex flex-col p-6 flex-[1.25] rounded-2xl border border-[#dcdcdc] bg-white self-start">
+          <header className="flex flex-col gap-2 mb-2">
             <h2 className="text-2xl font-medium text-black">❘ Bitzaro News</h2>
             <p className="text-[#323232] text-xl">
               Get the latest crypto update.
             </p>
           </header>
 
-          <nav className="flex flex-col">
+          <nav className="flex flex-col mb-2">
             {newsItems.map((item, index) => (
               <React.Fragment key={item.id}>
-                <article className="flex items-center gap-4 py-4">
+                <article className="flex items-center gap-5 py-5">
                   <div className="w-[26px] font-extrabold text-[#dde1e7] text-[32px] text-center">
                     {item.id}
                   </div>

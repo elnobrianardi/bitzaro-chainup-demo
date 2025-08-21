@@ -1,63 +1,80 @@
-import React from "react";
-import ADA from "../assets/Currency_Container/Frame_15.png";
-import BTC from "../assets/Currency_Container/Frame_2.png";
-import COMP from "../assets/Currency_Container/Frame_18.png";
-import ENJ from "../assets/Currency_Container/Frame_20.png";
-import ETHBw from "../assets/Currency_Container/Frame_13.png";
-import LTC from "../assets/Currency_Container/Frame_11.png";
-import SOL from "../assets/Currency_Container/Frame_19.png";
-import UNI from "../assets/Currency_Container/Frame_14.png";
-import avax from "../assets/Currency_Container/Frame_12.png";
-import bnb from "../assets/Currency_Container/Frame_8.png";
-import dodge from "../assets/Currency_Container/Frame_15.png";
-import xrp from "../assets/Currency_Container/Frame_10.png";
+import React, { useEffect, useRef, useState } from "react";
+import spotTableData from "../data/spotTableData";
 
 export const CommunitySection = () => {
-  const cryptoIcons = [
-    COMP, bnb, BTC, dodge, xrp, LTC,
-    ETHBw, UNI, ADA, ENJ, SOL, avax
-  ];
+  const [rowWidth, setRowWidth] = useState(0);
+  const rowRef = useRef(null);
 
-  const CryptoImage = ({ src }) => (
-    <div className="min-w-max p-3">
-      <img
-        className="w-[224px] h-[52px] object-contain"
-        src={src}
-        alt="crypto icon"
-      />
+  useEffect(() => {
+    if (rowRef.current) {
+      // get width of ONE set (not the doubled one)
+      setRowWidth(rowRef.current.scrollWidth);
+    }
+  }, []);
+
+  const CryptoImage = ({ src, coin, price, change, changeColor }) => (
+    <div className="min-w-max p-3 flex items-center gap-3 bg-white rounded-lg px-4">
+      <img className="w-7 h-7 object-contain" src={src} alt={coin} />
+      <div className="flex gap-5">
+        <span className="text-[#323232] text-sm font-semibold">
+          {coin.replace("/USDT", "")}
+        </span>
+        <span className="text-[#323232] font-semibold text-sm">{price}</span>
+        <span className={`text-xs font-medium ${changeColor}`}>{change}</span>
+      </div>
+    </div>
+  );
+
+  // Slower speed: 40px per second
+  const speed = 40;
+  const duration = rowWidth / speed;
+
+  const Row = ({ reverse, extraDelay = 0 }) => (
+    <div
+      className="flex whitespace-nowrap"
+      style={{
+        animation: rowWidth
+          ? `${reverse ? "marquee-reverse" : "marquee"} ${
+              duration + extraDelay
+            }s linear infinite`
+          : "none",
+        "--rowWidth": `${rowWidth}px`, 
+      }}
+    >
+      {/* First copy */}
+      <div className="flex gap-6 pr-6" ref={!reverse ? rowRef : null}>
+        {spotTableData.map((coin, i) => (
+          <CryptoImage key={`row-${reverse ? "rev" : "fwd"}-${i}`} {...coin} />
+        ))}
+      </div>
+
+      {/* Second copy */}
+      <div className="flex gap-6 pr-6">
+        {spotTableData.map((coin, i) => (
+          <CryptoImage
+            key={`row-dup-${reverse ? "rev" : "fwd"}-${i}`}
+            {...coin}
+          />
+        ))}
+      </div>
     </div>
   );
 
   return (
     <section className="overflow-hidden w-full py-6">
-      {/* First row */}
-      <div className="flex animate-marquee gap-6">
-        {[...cryptoIcons, ...cryptoIcons].map((icon, index) => (
-          <CryptoImage key={`row1-${index}`} src={icon} />
-        ))}
-      </div>
-
-      {/* Second row with offset */}
-      <div className="flex animate-marquee-reverse gap-6 mt-4 pl-10">
-        {[...cryptoIcons, ...cryptoIcons].map((icon, index) => (
-          <CryptoImage key={`row2-${index}`} src={icon} />
-        ))}
+      <Row reverse={false} />
+      <div className="mt-4 pl-10">
+        <Row reverse={true} extraDelay={2} />
       </div>
 
       <style>{`
         @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(calc(-1 * var(--rowWidth))); }
         }
         @keyframes marquee-reverse {
-          0% { transform: translateX(-50%); }
+          0%   { transform: translateX(calc(-1 * var(--rowWidth))); }
           100% { transform: translateX(0); }
-        }
-        .animate-marquee {
-          animation: marquee 20s linear infinite;
-        }
-        .animate-marquee-reverse {
-          animation: marquee-reverse 22s linear infinite;
         }
       `}</style>
     </section>

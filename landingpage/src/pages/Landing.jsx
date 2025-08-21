@@ -67,7 +67,7 @@ export const Landing = () => {
       </section>
 
       {/* Ultimate Web Trading Experience */}
-      <section className="w-full bg-white">
+      <section className="w-full bg-gradient-to-t from-[#F6F5F7] to-white">
         <div className="max-w-[1200px] mx-auto text-center py-8 px-4">
           <h2 className="text-5xl font-extrabold">
             The Ultimate Web <br /> Trading Experience
@@ -87,7 +87,7 @@ export const Landing = () => {
       </section>
 
       {/* Community Section - background */}
-      <section className="w-full bg-gray-150">
+      <section className="w-full bg-[#F6F5F7]">
         <div className="mx-auto pt-8 pb-16">
           <CommunitySection />
         </div>
@@ -125,14 +125,14 @@ export const Landing = () => {
       {/* Crypto Insights - background */}
       <section className="w-full">
         <div className="max-w-[1200px] mx-auto text-center py-16 px-4">
-          <h2 className="text-5xl font-extrabold mb-16 text-left">
+          <h2 className="text-5xl font-extrabold text-left">
             Crypto Latest Insights
           </h2>
           <CryptoInsightsSection />
         </div>
         <div className="w-full">
           <TradingExperienceSection />
-          <div className="max-w-[1200px] mx-auto text-center px-4">
+          <div className="max-w-[1200px] mx-auto text-center">
             <InsightsSection />
           </div>
         </div>

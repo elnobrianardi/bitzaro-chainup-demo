@@ -44,13 +44,13 @@ export const IntroductionSection = () => {
               alt="Mobile phones showing crypto trading interface"
               className="relative z-10 w-[200px] sm:w-[280px] md:w-[400px] lg:w-[583px] h-auto object-contain"
             />
+            {/* Bottom Gradient Overlay (in front of phone bottom) */}
+            <div className="absolute hidden md:block bottom-0 w-full h-1/5 bg-gradient-to-t rounded-b-4xl from-[#121128] via-[#121128]/98 backdrop-blur-xs/90 to-transparent z-20 pointer-events-none" />
             {/* Bottom Gradient Overlay (in front of phone bottom for small screen)
             <div className="absolute md:hidden block bottom-5 w-full h-1/5 bg-gradient-to-t from-[#161220] via-[#161220]/95 to-transparent z-20 pointer-events-none" /> */}
           </div>
         </div>
       </div>
-      {/* Bottom Gradient Overlay (in front of phone bottom) */}
-      <div className="absolute hidden md:block bottom-50 w-full h-1/5 bg-gradient-to-t from-[#121128] via-[#121128]/98 to-transparent z-20 pointer-events-none" />
     </section>
   );
 };

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import tableData from '../data/trendingTable'
 
 const TrendingTable = () => (
-  <div className="py-8 px-4 sm:px-6 lg:px-8">
+  <div className="pt-8 pb-40 px-4">
     <h2 className="text-white text-xl sm:text-2xl mb-4 sm:mb-6">Trending Coins</h2>
 
     {/* Scrollable wrapper */}

@@ -36,7 +36,7 @@ const SearchBar = () => {
   return (
     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-gray-500 relative w-full gap-4 sm:gap-0">
       {/* Tabs */}
-      <div className="flex text-gray-200 gap-6 w-full sm:w-auto relative">
+      <div className="flex text-gray-200 p-2 gap-6 w-full sm:w-auto relative">
         {tabs.map(({ label, path }, index) =>
           path ? (
             <Link key={label} to={path} onClick={() => handleClick(path)}>
@@ -81,10 +81,11 @@ const SearchBar = () => {
         className="
           bg-[#F1EEF71A] 
           rounded-full 
-          px-1 pt-1 
+          px-1 py-2 
           flex-1 sm:flex-none 
           mb-2 sm:mb-0 
-          sm:w-[280px] lg:w-[160px] 
+          w-3xs 
+          pr-6
         "
       >
         <div className="flex gap-2 items-center">

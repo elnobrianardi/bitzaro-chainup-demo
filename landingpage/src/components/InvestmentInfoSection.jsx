@@ -22,7 +22,7 @@ export const InvestmentInfoSection = () => {
 
   return (
     <section
-      className="flex flex-col md:flex-row w-full max-w-[1200px] mx-auto items-start md:items-start gap-10 md:gap-[62px] my-8"
+      className="flex flex-col md:flex-row w-full max-w-[1200px] mx-auto items-start md:items-start gap-10 md:gap-[62px] mb-20"
       role="region"
       aria-labelledby="investment-info-heading"
     >

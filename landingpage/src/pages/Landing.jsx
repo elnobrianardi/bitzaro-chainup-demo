@@ -29,7 +29,7 @@ export const Landing = () => {
       {/* One App Heading */}
       <section className="relative w-full bg-white z-0 md:z-30">
         <div className="max-w-[1200px] mx-auto text-center items-center justify-center px-4">
-          <div className="absolute -top-16 left-1/2 -translate-x-1/2 pt-16 pb-14 rounded-t-4xl w-full bg-white">
+          <div className="absolute -top-16 left-1/2 -translate-x-1/2 pt-16 pb-12 rounded-t-4xl w-full bg-white">
             <h2 className="text-5xl font-extrabold">
               One App, Endless Possibilities
             </h2>
@@ -94,7 +94,7 @@ export const Landing = () => {
       </section>
 
       {/* Bitcoin Investment */}
-      <section className="w-full">
+      <section className="w-full px-4">
         <div className="max-w-[1200px] mx-auto py-16">
           <div className="flex gap-4 items-start">
             <h2 className="text-5xl font-extrabold pb-16 text-left">
@@ -104,7 +104,7 @@ export const Landing = () => {
           </div>
 
           <BitcoinInvestmentSection />
-          <p className="text-sm text-gray-500 mt-4">
+          <p className="text-sm text-gray-500 mt-4 text-center">
             Based on data from 1 March 2020 - 1 March 2024. Past performances do
             not guarantee the future.
           </p>

@@ -15,7 +15,7 @@ export const NavigationSection = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-[#16121f] backdrop-blur-[5px] z-50 py-4">
-      <div className="max-w-[1200px] w-full mx-auto flex justify-between items-center px-4">
+      <div className="max-w-[1200px] w-full mx-auto flex justify-between items-center">
         {/* Left group */}
         <div className="flex items-center gap-6">
           <Link to="/">

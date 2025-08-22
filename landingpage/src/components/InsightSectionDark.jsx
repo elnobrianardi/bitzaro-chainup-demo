@@ -1,5 +1,5 @@
 import React from "react";
-import bitzaroLogoWhite from "../assets/Logo/BitzaroLogoWhite.png";
+import bitzaroLogoBlack from "../assets/Logo/BitzaroLogoBlack.png";
 
 export const InsightsSectionDark = () => {
   const footerData = {
@@ -29,17 +29,16 @@ export const InsightsSectionDark = () => {
   };
 
   return (
-    <footer className="max-w-[1200px] mx-autopy-10 flex xl:flex-row flex-col gap-10 text-white pb-8">
-      
-      {/* Logo + Address + Button centered */}
-      <div className="flex flex-col items-center gap-6 text-center">
+    <footer className="max-w-full mx-auto justify-evenly py-10 flex md:flex-row flex-col gap-10 border-t border-[#83888F]/40">
+      {/* Logo + Address + Button */}
+      <div className="flex flex-col gap-6 items-start md:text-left">
         <img
-          className="w-[122px] h-6 object-contain"
+          className="w-[122px] h-auto"
           alt="Bitzaro logo"
-          src={bitzaroLogoWhite}
+          src={bitzaroLogoBlack}
         />
 
-        <address className="font-medium text-gray-400 text-sm leading-[21px] not-italic">
+        <address className="font-medium text-[#F5F7FA] text-sm leading-[21px] not-italic">
           Room 1046, 14/F, Solo Building
           <br />
           41–43 Carnarvon Road, Tsim Sha Tsui
@@ -47,20 +46,20 @@ export const InsightsSectionDark = () => {
           Kowloon, Hong Kong
         </address>
 
-        <button className="px-4 py-2 bg-[#7815F9] rounded-md text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
+        <button className="w-fit self-center md:self-start px-4 py-2 bg-[#7815F9] rounded-md text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
           Download Bitzaro App
         </button>
       </div>
 
       {/* Footer Links in 2-column grid on small screens, 4 columns on larger screens */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 w-full text-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center md:text-left">
         {Object.entries(footerData).map(([section, links]) => (
           <nav
             key={section}
             className="flex flex-col gap-6"
             aria-label={`${section} navigation`}
           >
-            <h3 className="text-gray-500 text-sm font-medium uppercase">
+            <h3 className="text-[#83888F] text-sm font-medium uppercase">
               {section}
             </h3>
             <ul className="flex flex-col gap-4">
@@ -68,7 +67,7 @@ export const InsightsSectionDark = () => {
                 <li key={index}>
                   <a
                     href={item.href}
-                    className="text-white text-sm font-medium hover:text-[#913DFF] transition-colors"
+                    className="text-[#F5F7FA] text-sm font-medium hover:text-[#7815f9] transition-colors"
                   >
                     {item.name}
                   </a>

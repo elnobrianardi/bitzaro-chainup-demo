@@ -13,7 +13,7 @@ export const CommunitySection = () => {
   }, []);
 
   const CryptoImage = ({ src, coin, price, change, changeColor }) => (
-    <div className="min-w-max p-3 flex items-center gap-3 bg-white rounded-lg px-4">
+    <div className="min-w-max p-3 flex items-center gap-5 bg-white rounded-md">
       <img className="w-7 h-7 object-contain" src={src} alt={coin} />
       <div className="flex gap-5">
         <span className="text-[#323232] text-sm font-semibold">
@@ -31,7 +31,7 @@ export const CommunitySection = () => {
 
   const Row = ({ reverse, extraDelay = 0 }) => (
     <div
-      className="flex whitespace-nowrap"
+      className="flex whitespace-nowrap "
       style={{
         animation: rowWidth
           ? `${reverse ? "marquee-reverse" : "marquee"} ${
@@ -63,7 +63,7 @@ export const CommunitySection = () => {
   return (
     <section className="overflow-hidden w-full py-6">
       <Row reverse={false} />
-      <div className="mt-4 pl-10">
+      <div className="mt-6 pl-10">
         <Row reverse={true} extraDelay={2} />
       </div>
 

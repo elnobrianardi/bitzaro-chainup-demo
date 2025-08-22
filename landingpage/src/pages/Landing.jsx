@@ -27,9 +27,9 @@ export const Landing = () => {
       </section>
 
       {/* One App Heading */}
-      <section className="relative w-full bg-white z-30">
+      <section className="relative w-full bg-white z-0 md:z-30">
         <div className="max-w-[1200px] mx-auto text-center items-center justify-center px-4">
-          <div className="absolute -top-16 left-1/2 -translate-x-1/2 pt-16 rounded-t-4xl w-full bg-white">
+          <div className="absolute -top-16 left-1/2 -translate-x-1/2 pt-16 pb-14 rounded-t-4xl w-full bg-white">
             <h2 className="text-5xl font-extrabold">
               One App, Endless Possibilities
             </h2>
@@ -69,19 +69,19 @@ export const Landing = () => {
       {/* Ultimate Web Trading Experience */}
       <section className="w-full bg-gradient-to-t from-[#F6F5F7] to-white">
         <div className="max-w-[1200px] mx-auto text-center py-8 px-4">
-          <h2 className="text-5xl font-extrabold">
-            The Ultimate Web <br /> Trading Experience
+          <h2 className="text-5xl font-extrabold leading-[110%]">
+            The Ultimate <br />  Web Trading Experience
           </h2>
-          <p className="text-2xl text-gray-800 mt-4">
+          <p className="text-2xl text-[#1C1C1C] mt-4 font-medium">
             Enjoy Bitzaro right from your desktop
           </p>
-          <button className="mt-6 px-8 py-4 bg-[#7815F9] text-white font-semibold rounded-md">
+          <button className="mt-12 px-14 py-3 bg-[#7815F9] text-white font-semibold rounded-md">
             Launch on Desktop
           </button>
           <img
             src={Dashboard}
             alt="Dashboard"
-            className="max-w-5xl w-full mt-8 rounded-lg shadow-lg mx-auto"
+            className="max-w-5xl w-full mt-10 rounded-lg shadow-lg mx-auto"
           />
         </div>
       </section>

@@ -29,7 +29,7 @@ export const InsightsSection = () => {
   };
 
   return (
-    <footer className="max-w-[1200px] mx-auto px-6 sm:px-12 py-10 flex xl:flex-row flex-col gap-10">
+    <footer className="max-w-[1200px] mx-auto justify-evenly py-10 flex xl:flex-row flex-col gap-10">
       {/* Logo + Address + Button */}
       <div className="flex flex-col gap-6 text-left">
         <img

@@ -27,7 +27,7 @@ export const Landing = () => {
       </section>
 
       {/* One App Heading */}
-      <section className="relative w-full bg-white">
+      <section className="relative w-full bg-white z-30">
         <div className="max-w-[1200px] mx-auto text-center items-center justify-center px-4">
           <div className="absolute -top-16 left-1/2 -translate-x-1/2 pt-16 rounded-t-4xl w-full bg-white">
             <h2 className="text-5xl font-extrabold">

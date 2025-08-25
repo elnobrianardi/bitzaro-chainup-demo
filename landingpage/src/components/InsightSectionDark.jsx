@@ -31,14 +31,14 @@ export const InsightsSectionDark = () => {
   return (
     <footer className="max-w-full mx-auto justify-evenly py-10 flex md:flex-row flex-col gap-10 border-t border-[#83888F]/40">
       {/* Logo + Address + Button */}
-      <div className="flex flex-col gap-6 items-start md:text-left">
+      <div className="flex flex-col gap-6 items-center md:items-start self-center">
         <img
           className="w-[122px] h-auto"
           alt="Bitzaro logo"
           src={bitzaroLogoBlack}
         />
 
-        <address className="font-medium text-[#F5F7FA] text-sm leading-[21px] not-italic">
+        <address className="font-medium text-[#F5F7FA] text-sm leading-[21px] not-italic text-center md:text-left">
           Room 1046, 14/F, Solo Building
           <br />
           41–43 Carnarvon Road, Tsim Sha Tsui

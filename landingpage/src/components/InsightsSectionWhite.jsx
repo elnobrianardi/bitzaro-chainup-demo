@@ -31,7 +31,7 @@ export const InsightsSection = () => {
   return (
     <footer className="max-w-full mx-auto justify-evenly py-10 flex md:flex-row flex-col gap-10">
       {/* Logo + Address + Button */}
-      <div className="flex flex-col gap-6 items-start md:text-left">
+      <div className="flex flex-col gap-6 items-center md:items-start md:text-left self-center">
         <img
           className="w-[122px] h-auto"
           alt="Bitzaro logo"
@@ -46,7 +46,7 @@ export const InsightsSection = () => {
           Kowloon, Hong Kong
         </address>
 
-        <button className="w-fit self-center md:self-start px-4 py-2 bg-[#7815F9] rounded-md text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
+        <button className="w-fit md:self-start px-4 py-2 bg-[#7815F9] rounded-md text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
           Download Bitzaro App
         </button>
       </div>

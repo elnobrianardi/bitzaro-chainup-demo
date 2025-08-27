@@ -1,6 +1,6 @@
 import React from "react";
-import icon1 from "../assets/Icon/Your Safety, Our Priority/license 1.png";
-import icon2 from "../assets/Icon/Your Safety, Our Priority/shield_toggle 1.png";
+import icon1 from "../assets/Icon/Your Safety, Our Priority/license.svg";
+import icon2 from "../assets/Icon/Your Safety, Our Priority/shield_toggle.svg";
 
 export const InvestmentInfoSection = () => {
   const investmentFeatures = [

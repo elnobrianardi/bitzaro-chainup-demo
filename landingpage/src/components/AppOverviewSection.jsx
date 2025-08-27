@@ -1,6 +1,6 @@
 import React from "react";
 import arrowRightAlt4 from "../assets/Icon/Navigation_Icon_(Profile, Language, Arrow)/arrow_right_alt.png";
-import frame3 from "../assets/Add-On/fire-btc 1.png";
+import firebtc from "../assets/Add-On/fire-btc.png";
 
 export const AppOverviewSection = () => {
   return (
@@ -17,7 +17,7 @@ export const AppOverviewSection = () => {
       <img
         className="w-[78px] h-auto object-contain"
         alt="Cryptocurrency trading illustration"
-        src={frame3}
+        src={firebtc}
       />
 
       <h2 className="w-full sm:w-fit font-medium text-[28px] sm:text-[32px] leading-8 sm:leading-10 tracking-[0] text-left">

@@ -29,9 +29,9 @@ export const InsightsSection = () => {
   };
 
   return (
-    <footer className="max-w-full mx-auto justify-evenly py-10 flex md:flex-row flex-col gap-10">
+    <footer className="max-w-full mx-auto justify-between py-10 flex md:flex-row flex-col gap-10">
       {/* Logo + Address + Button */}
-      <div className="flex flex-col gap-6 items-center md:items-start md:text-left self-center">
+      <div className="flex flex-1/3 flex-col gap-6 items-center md:items-start md:text-left self-center">
         <img
           className="w-[122px] h-auto"
           alt="Bitzaro logo"
@@ -52,7 +52,7 @@ export const InsightsSection = () => {
       </div>
 
       {/* Footer Links in 2-column grid on small screens, 4 columns on larger screens */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center md:text-left">
+      <div className="flex-2/3 grid grid-cols-2 md:grid-cols-4 gap-10 text-center md:text-left">
         {Object.entries(footerData).map(([section, links]) => (
           <nav
             key={section}

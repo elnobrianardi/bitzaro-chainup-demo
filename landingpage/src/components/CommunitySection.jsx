@@ -15,7 +15,7 @@ export const CommunitySection = () => {
   const CryptoImage = ({ src, coin, price, change, changeColor }) => (
     <div className="min-w-max p-3 flex items-center gap-5 bg-white rounded-md">
       <img className="w-7 h-7 object-contain" src={src} alt={coin} />
-      <div className="flex gap-5">
+      <div className="flex gap-5 items-center">
         <span className="text-[#323232] text-sm font-semibold">
           {coin.replace("/USDT", "")}
         </span>

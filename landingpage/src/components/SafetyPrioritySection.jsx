@@ -1,6 +1,6 @@
 import React from "react";
-import custodian from "../assets/Icon/Your Safety, Our Priority/fingerprint 1.png";
-import biometric from "../assets/Icon/Your Safety, Our Priority/Savings 1.png";
+import custodian from "../assets/Icon/Your Safety, Our Priority/fingerprint.svg";
+import biometric from "../assets/Icon/Your Safety, Our Priority/Savings.svg";
 
 export const SafetyPrioritySection = () => {
   const safetyFeatures = [

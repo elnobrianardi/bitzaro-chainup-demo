@@ -1,6 +1,6 @@
 import React from "react";
 import arrowRightAlt4 from "../assets/Icon/Navigation_Icon_(Profile, Language, Arrow)/arrow_right_alt.png";
-import frame3 from "../assets/Add-On/List_of_Currency.png";
+import coins from "../assets/Add-On/more-coins@2x.png";
 
 export const FeaturesSection = () => {
   return (
@@ -19,7 +19,7 @@ export const FeaturesSection = () => {
         <img
           className="w-full h-full object-cover"
           alt="Cryptocurrency trading illustration"
-          src={frame3}
+          src={coins}
         />
       </div>
 

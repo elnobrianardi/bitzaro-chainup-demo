@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import bitzaroLogoWhite from "../assets/Logo/BitzaroLogoWhite.png";
 import bitzaroLogoBlack from "../assets/Logo/BitzaroLogoBlack.png";
-import languagePurple from "../assets/Icon/Your Safety, Our Priority/Language.svg";
-import languageWhite from "../assets/Icon/Your Safety, Our Priority/Language1.svg";
+import languagePurple from "../assets/Icon/Your Safety, Our Priority/language.svg";
+import languageWhite from "../assets/Icon/Your Safety, Our Priority/language1.svg";
 import { Menu, X } from "lucide-react"; 
 
 export const HeaderSection = () => {

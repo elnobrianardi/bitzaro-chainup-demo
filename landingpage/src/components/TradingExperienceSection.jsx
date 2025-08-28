@@ -17,7 +17,7 @@ export const TradingExperienceSection = () => {
 
       {/* Button */}
       <button
-        className="w-[250px] sm:w-[300px] px-5 py-3 bg-white flex items-center justify-center rounded-md hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
+        className="w-[250px] sm:w-[300px] px-5 py-3 bg-white flex items-center justify-center rounded-md font-poppins hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
         aria-label="Download Bitzaro Now"
       >
         <span className="font-semibold text-[#7815f9] text-lg sm:text-xl leading-[30px] text-center">

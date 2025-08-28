@@ -46,7 +46,7 @@ export const InsightsSection = () => {
           Kowloon, Hong Kong
         </address>
 
-        <button className="w-fit md:self-start px-4 py-2 bg-[#7815F9] rounded-md text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
+        <button className="w-fit md:self-start px-4 py-2 bg-[#7815F9] rounded-md text-white text-sm font-medium hover:bg-opacity-90 font-poppins transition-colors">
           Download Bitzaro App
         </button>
       </div>

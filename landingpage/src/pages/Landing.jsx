@@ -75,7 +75,7 @@ export const Landing = () => {
           <p className="text-2xl text-[#1C1C1C] mt-4 font-medium">
             Enjoy Bitzaro right from your desktop
           </p>
-          <button className="mt-12 px-14 py-3 bg-[#7815F9] text-white font-semibold rounded-md">
+          <button className="mt-12 px-14 py-3 bg-[#7815F9] text-white font-semibold rounded-md font-poppins">
             Launch on Desktop
           </button>
           <img

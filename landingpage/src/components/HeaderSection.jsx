@@ -4,7 +4,7 @@ import bitzaroLogoWhite from "../assets/Logo/BitzaroLogoWhite.png";
 import bitzaroLogoBlack from "../assets/Logo/BitzaroLogoBlack.png";
 import languagePurple from "../assets/Icon/Your Safety, Our Priority/language.svg";
 import languageWhite from "../assets/Icon/Your Safety, Our Priority/language1.svg";
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
 
 export const HeaderSection = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -30,22 +30,25 @@ export const HeaderSection = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full transition-colors duration-300 z-50  ${
-        scrolled ? "bg-white/70 backdrop-blur-[12px] border-b-1 border-[#EFF4F9]" : "bg-[#16121f]"
-      } py-4`}
+        scrolled
+          ? "bg-white/70 backdrop-blur-[12px] border-b-1 border-[#EFF4F9]"
+          : "bg-[#16121f]"
+      } py-6`}
     >
-      <div className="max-w-[1200px] w-full mx-auto flex justify-between items-center px-4">
+      <div className="max-w-[1200px] w-full mx-auto flex justify-between px-4">
         {/* Left group */}
-        <div className="flex items-center gap-6">
-          <Link to="/">
-            <img
-              className="h-10 object-contain mb-3"
-              alt="Bitzaro logo"
-              src={scrolled ? bitzaroLogoBlack : bitzaroLogoWhite}
-            />
-          </Link>
-
+        <div className="flex gap-6">
+          <div className="flex">
+            <Link to="/">
+              <img
+                className="h-6 object-contain"
+                alt="Bitzaro logo"
+                src={scrolled ? bitzaroLogoBlack : bitzaroLogoWhite}
+              />
+            </Link>
+          </div>
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex gap-6 items-center">
             {navigationItems.map((item, index) => (
               <Link
                 key={index}
@@ -63,7 +66,7 @@ export const HeaderSection = () => {
         {/* Right group */}
         <div className="hidden md:flex items-center gap-4">
           <button
-            className={`px-4 py-2 rounded-md transition-colors font-poppins ${
+            className={`px-4 py-2 rounded-md transition-colors font-poppins text-sm ${
               scrolled
                 ? "bg-[#F0EFFB] text-[#2F075D] font-medium"
                 : "bg-[#F1EEF71A] text-white font-medium hover:bg-[#f1eef72a]"
@@ -71,7 +74,7 @@ export const HeaderSection = () => {
           >
             Login
           </button>
-          <button className="px-4 py-2 rounded-md bg-[#7815F9] font-medium text-white hover:bg-opacity-90 transition-all font-poppins">
+          <button className="px-4 py-2 rounded-md bg-[#7815F9] font-medium text-white hover:bg-opacity-90 transition-all font-poppins text-sm">
             Sign Up
           </button>
           <button
@@ -128,12 +131,12 @@ export const HeaderSection = () => {
               className={`px-4 py-2 rounded-md ${
                 scrolled
                   ? "bg-gray-300 text-[#2F075D]"
-                  : "bg-[#f1eef71a] text-[#2F075D] hover:bg-[#f1eef72a]"
+                  : "bg-[#f1eef71a] text-[#2F075D] hover:bg-[#f1eef72a] text-sm"
               }`}
             >
               Login
             </button>
-            <button className="px-4 py-2 rounded-md bg-[#7815F9] text-white">
+            <button className="px-4 py-2 rounded-md bg-[#7815F9] text-white text-sm">
               Sign Up
             </button>
           </div>

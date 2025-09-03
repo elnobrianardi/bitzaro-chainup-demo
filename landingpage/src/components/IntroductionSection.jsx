@@ -17,9 +17,9 @@ export const IntroductionSection = () => {
 
       {/* Inner content wrapper */}
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between min-h-[650px] py-8 gap-10">
+        <div className="flex flex-col-reverse md:flex-row justify-between min-h-[650px] py-8 gap-10">
           {/* Text */}
-          <div className="flex-1 text-white text-center md:text-left mt-6 md:-mt-[32px]">
+          <div className="flex-1 text-white text-center md:text-left mt-20 gap-5">
             <h1 className="font-black text-[32px] sm:text-[38px] md:text-[52px] lg:text-[62px] leading-tight">
               Trade Crypto only <br className="hidden sm:block" /> on Bitzaro
             </h1>
@@ -29,7 +29,7 @@ export const IntroductionSection = () => {
               trade with confidence
             </p>
             <button
-              className="mt-6 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#7815F9] rounded-md hover:bg-opacity-90 focus:outline-none focus:ring-2 font-poppins focus:ring-primitives-brand-primary focus:ring-offset-2 focus:ring-offset-[#16121f] transition-all duration-200 text-sm sm:text-base md:text-lg font-semibold"
+              className="mt-11 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#7815F9] rounded-md hover:bg-opacity-90 focus:outline-none focus:ring-2 font-poppins focus:ring-primitives-brand-primary focus:ring-offset-2 focus:ring-offset-[#16121f] transition-all duration-200 text-sm sm:text-base md:text-lg font-semibold"
               aria-label="Start trading crypto on Bitzaro"
             >
               Trade Crypto

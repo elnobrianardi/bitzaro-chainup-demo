@@ -20,7 +20,7 @@ export const AppOverviewSection = () => {
         src={firebtc}
       />
 
-      <h2 className="w-full sm:w-fit font-medium text-[28px] sm:text-[32px] leading-8 sm:leading-10 tracking-[0] text-left">
+      <h2 className="w-full sm:w-fit font-medium text-xl xs:text-2xl sm:text-3xl leading-8 sm:leading-10 tracking-[0] text-left">
         <span className="text-[#323232]">Swap and discover <br /></span>
         <p className="text-black"><span className="text-[#E37404]">the hottest tokens</span> in Web3</p>
       </h2>

@@ -84,10 +84,10 @@ export const CryptoInsightsSection = () => {
         {/* Academy */}
         <article className="flex flex-col gap-5 py-6 flex-[2.75] bg-white rounded-lg">
           <header className="flex flex-col gap-2">
-            <h2 className="text-2xl font-medium text-black mb-2">
+            <h2 className="text-lg xs:text-xl sm:text-2xl font-medium text-black mb-2">
               ❘ Bitzaro Academy
             </h2>
-            <p className="text-[#323232] text-xl">
+            <p className="text-[#323232] text-lg sm:text-xl">
               Discover the easiest way to learn crypto.
             </p>
           </header>
@@ -106,7 +106,7 @@ export const CryptoInsightsSection = () => {
                       src={article.image}
                     />
                     <div className="p-2">
-                      <h3 className="font-medium text-[#1b1b1b] text-lg leading-[22.5px] line-clamp-2">
+                      <h3 className="font-medium text-[#1b1b1b] text-md sm:text-lg leading-[22.5px] line-clamp-2">
                         {article.title}
                       </h3>
                     </div>
@@ -130,8 +130,8 @@ export const CryptoInsightsSection = () => {
         {/* News */}
         <aside className="flex flex-col p-6 flex-[1.25] rounded-2xl border border-[#dcdcdc] bg-white self-start">
           <header className="flex flex-col gap-2 mb-2">
-            <h2 className="text-2xl font-medium text-black">❘ Bitzaro News</h2>
-            <p className="text-[#323232] text-xl">
+            <h2 className="text-lg xs:text-xl sm:text-2xl font-medium text-black">❘ Bitzaro News</h2>
+            <p className="text-[#323232] text-md xs:text-lg sm:text-xl">
               Get the latest crypto update.
             </p>
           </header>
@@ -140,10 +140,10 @@ export const CryptoInsightsSection = () => {
             {newsItems.map((item, index) => (
               <React.Fragment key={item.id}>
                 <article className="flex items-center gap-5 py-5">
-                  <div className="w-[26px] font-extrabold text-[#dde1e7] text-[32px] text-center">
+                  <div className="w-[26px] font-extrabold text-[#dde1e7] text-2xl sm:text-3xl text-center">
                     {item.id}
                   </div>
-                  <h3 className="flex-1 font-semibold text-[#1b1b1b] text-base leading-6 line-clamp-2">
+                  <h3 className="flex-1 font-semibold text-[#1b1b1b] text-sm sm:text-base leading-6 line-clamp-2">
                     {item.title}
                   </h3>
                 </article>
@@ -158,7 +158,7 @@ export const CryptoInsightsSection = () => {
           <footer className="flex items-center gap-1">
             <a
               href="#"
-              className="font-medium text-[#7815f9] text-base whitespace-nowrap"
+              className="font-medium text-[#7815f9] text-sm sm:text-base whitespace-nowrap"
             >
               Read More on Bitzaro News
             </a>

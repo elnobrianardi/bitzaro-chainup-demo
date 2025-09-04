@@ -1,6 +1,7 @@
 import React from "react";
 import heroSection from "../assets/Hero_Section/Hero_Section.png";
 import phoneMockUp from "../assets/Phone_MockUp/PhoneMockUp.png";
+import { Link } from "react-router-dom";
 
 export const IntroductionSection = () => {
   return (
@@ -19,21 +20,23 @@ export const IntroductionSection = () => {
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4">
         <div className="flex flex-col-reverse md:flex-row justify-between min-h-[650px] py-8 gap-10">
           {/* Text */}
-          <div className="flex-1 text-white text-center md:text-left mt-20 gap-5">
-            <h1 className="font-black text-[32px] sm:text-[38px] md:text-[52px] lg:text-[62px] leading-tight">
-              Trade Crypto only <br className="hidden sm:block" /> on Bitzaro
+          <div className="flex-1 text-white text-center md:text-left mt-0 md:mt-20 gap-5">
+            <h1 className="font-black text-[32px] sm:text-[38px] lg:text-[52px] xl:text-[62px] leading-tight">
+              Trade Crypto only <br className="block" /> on Bitzaro
             </h1>
-            <p className="mt-4 text-base sm:text-lg md:text-xl text-[#e1e1e1] leading-relaxed">
+            <p className="mt-4 text-base md:text-lg lg:text-xl text-[#e1e1e1] leading-relaxed">
               Industry-grade infrastructure empowers you to{" "}
               <br className="hidden sm:block" />
               trade with confidence
             </p>
-            <button
-              className="mt-11 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#7815F9] rounded-md hover:bg-opacity-90 focus:outline-none focus:ring-2 font-poppins focus:ring-primitives-brand-primary focus:ring-offset-2 focus:ring-offset-[#16121f] transition-all duration-200 text-sm sm:text-base md:text-lg font-semibold"
-              aria-label="Start trading crypto on Bitzaro"
-            >
-              Trade Crypto
-            </button>
+            <Link to="/market">
+              <button
+                className="mt-11 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#7815F9] rounded-md hover:bg-opacity-90 focus:outline-none cursor-pointer focus:ring-2 font-poppins focus:ring-primitives-brand-primary focus:ring-offset-2 focus:ring-offset-[#16121f] transition-all duration-200 text-sm sm:text-base md:text-lg font-semibold"
+                aria-label="Start trading crypto on Bitzaro"
+              >
+                Trade Crypto
+              </button>
+            </Link>
           </div>
 
           {/* Phone Mockup with its own gradient */}
@@ -42,7 +45,7 @@ export const IntroductionSection = () => {
             <img
               src={phoneMockUp}
               alt="Mobile phones showing crypto trading interface"
-              className="relative z-10 w-[200px] sm:w-[280px] md:w-[400px] lg:w-[583px] h-auto object-contain"
+              className="relative z-10 w-[280px] md:w-[400px] lg:w-[583px] h-auto object-contain"
             />
             {/* Bottom Gradient Overlay (Desktop) */}
             <div

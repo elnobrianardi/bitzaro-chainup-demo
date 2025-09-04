@@ -15,11 +15,11 @@ export const ContentWrapperSection = () => {
       </button>
 
       <div className="flex flex-col items-start gap-3 sm:gap-4">
-        <div className="w-fit font-medium text-[#0b8c8c] text-lg sm:text-xl leading-[25px] tracking-[0] whitespace-nowrap">
+        <div className="w-fit font-medium text-[#0b8c8c] text-lg md:text-xl leading-[25px] tracking-[0] whitespace-nowrap">
           ❘ Beginner Friendly
         </div>
 
-        <h2 className="w-full sm:w-fit font-medium text-[#323232] text-2xl sm:text-[31px] [@media(min-width:1024px)_and_(max-width:1192px)]:text-[25px] leading-8 sm:leading-10 tracking-[0]">
+        <h2 className="w-full sm:w-fit font-medium text-[#323232] text-xl xs:text-2xl sm:text-3xl leading-8 sm:leading-10 tracking-[0]">
           The simplest way to trade, <br />
           perfect for beginner
         </h2>

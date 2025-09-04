@@ -24,9 +24,9 @@ export const FeaturesSection = () => {
       </div>
 
       {/* Text */}
-      <h2 className="w-full sm:w-auto font-medium text-[24px] sm:text-[32px] leading-7 sm:leading-10 tracking-[0] text-left">
+      <h2 className="w-full sm:w-auto font-medium text-xl xs:text-2xl sm:text-3xl leading-7 sm:leading-10 tracking-[0] text-left">
         <span className="text-[#323232]">Trade </span>
-        <span className="text-black">300+ cryptos</span>
+        <span className="text-black">300+ cryptos </span>
         <span className="text-[#323232]">
           <br />
           with Rupiah

@@ -16,7 +16,7 @@ const Market = () => {
         <MarketHeroSection />
       </section>
 
-      <section className="grid gap-4 pt-4 pb-10 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full max-w-[1200px] mx-auto">
+      <section className="grid gap-4 pt-4 pb-10 grid-cols-2 lg:grid-cols-4 w-full max-w-[1200px] mx-auto">
       {lineChartMockData.map((item) => (
         <LineChartCard key={item.id} {...item} />
       ))}

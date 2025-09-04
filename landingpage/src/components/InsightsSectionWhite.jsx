@@ -29,7 +29,7 @@ export const InsightsSection = () => {
   };
 
   return (
-    <footer className="max-w-full mx-auto justify-between py-10 flex md:flex-row flex-col gap-10">
+    <footer className="max-w-full mx-auto justify-between py-10 flex md:flex-row flex-col gap-10 px-4">
       {/* Logo + Address + Button */}
       <div className="flex flex-1/3 flex-col gap-6 items-center md:items-start md:text-left self-center">
         <img
@@ -38,7 +38,7 @@ export const InsightsSection = () => {
           src={bitzaroLogoBlack}
         />
 
-        <address className="font-medium text-[#5c5c5c] text-sm leading-[21px] not-italic">
+        <address className="font-medium text-[#5c5c5c] text-xs sm:text-sm leading-[21px] not-italic">
           Room 1046, 14/F, Solo Building
           <br />
           41–43 Carnarvon Road, Tsim Sha Tsui
@@ -46,7 +46,7 @@ export const InsightsSection = () => {
           Kowloon, Hong Kong
         </address>
 
-        <button className="w-fit md:self-start px-4 py-2 bg-[#7815F9] rounded-md text-white text-sm font-medium hover:bg-opacity-90 font-poppins transition-colors">
+        <button className="w-fit md:self-start px-4 py-2 bg-[#7815F9] rounded-md text-white text-xs sm:text-sm font-medium hover:bg-opacity-90 font-poppins transition-colors">
           Download Bitzaro App
         </button>
       </div>
@@ -59,7 +59,7 @@ export const InsightsSection = () => {
             className="flex flex-col gap-6"
             aria-label={`${section} navigation`}
           >
-            <h3 className="text-[#5c5c5c] text-sm font-medium uppercase">
+            <h3 className="text-[#5c5c5c] text-xs sm:text-sm font-medium uppercase">
               {section}
             </h3>
             <ul className="flex flex-col gap-4">
@@ -67,7 +67,7 @@ export const InsightsSection = () => {
                 <li key={index}>
                   <a
                     href={item.href}
-                    className="text-black text-sm font-medium hover:text-[#7815f9] transition-colors"
+                    className="text-black text-xs sm:text-sm font-medium hover:text-[#7815f9] transition-colors"
                   >
                     {item.name}
                   </a>

@@ -15,7 +15,7 @@ export const ComponentNodeSection = () => {
 
       {/* Text content */}
       <div className="flex flex-col items-start gap-2.5 p-6 sm:p-8 w-full z-10">
-        <h2 className="text-[28px] sm:text-[30px] leading-8 sm:leading-10 font-medium text-[#323232] tracking-[0]">
+        <h2 className="text-xl xs:text-2xl sm:text-3xl leading-8 sm:leading-10 font-medium text-[#323232] tracking-[0]">
           <span className="font-medium text-[#323232]">
             Get a bonus every hour with <br />
             Bitzaro Earn{" "}

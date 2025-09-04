@@ -14,13 +14,13 @@ export const NavigationSection = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-[#16121f] backdrop-blur-[5px] z-50 py-4">
-      <div className="max-w-[1200px] w-full mx-auto flex justify-between items-center">
+    <header className="fixed top-0 left-0 w-full bg-[#16121f] backdrop-blur-[5px] z-50 pt-6 pb-4 px-4">
+      <div className="max-w-[1200px] w-full mx-auto flex justify-between">
         {/* Left group */}
-        <div className="flex items-center gap-6">
+        <div className="flex gap-6">
           <Link to="/">
             <img
-              className="h-10 object-contain mb-2"
+              className="h-6 object-contain"
               src={bitzaroLogoWhite}
               alt="Bitzaro logo"
             />
@@ -42,10 +42,10 @@ export const NavigationSection = () => {
 
         {/* Right group */}
         <div className="hidden md:flex items-center gap-4">
-          <button className="px-4 py-2 rounded-md bg-[#f1eef71a] text-white hover:bg-[#f1eef72a] transition-colors">
+          <button className="px-4 py-2 rounded-md bg-[#f1eef71a] text-sm font-medium text-white hover:bg-[#f1eef72a] transition-colors">
             Login
           </button>
-          <button className="px-4 py-2 rounded-md bg-[#7815F9] text-white hover:bg-opacity-90 transition-all">
+          <button className="px-4 py-2 rounded-md bg-[#7815F9] text-white text-sm font-medium hover:bg-opacity-90 transition-all">
             Sign Up
           </button>
           <button className="p-2 rounded-full bg-[#f1eef71a] hover:bg-[#f1eef72a] transition-colors">

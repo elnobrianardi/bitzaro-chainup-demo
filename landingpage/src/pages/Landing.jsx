@@ -30,7 +30,7 @@ export const Landing = () => {
       <section className="relative w-full bg-white z-0 md:z-40">
         <div className="max-w-[1200px] mx-auto text-center items-center justify-center px-4">
           <div className="absolute -top-16 left-1/2 -translate-x-1/2 pt-16 pb-12 rounded-t-4xl w-full bg-white">
-            <h2 className="text-5xl font-extrabold">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
               One App, Endless Possibilities
             </h2>
           </div>
@@ -69,13 +69,13 @@ export const Landing = () => {
       {/* Ultimate Web Trading Experience */}
       <section className="w-full bg-gradient-to-t from-[#F6F5F7] to-white">
         <div className="max-w-[1200px] mx-auto text-center py-8 px-4">
-          <h2 className="text-5xl font-extrabold leading-[110%]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-[110%]">
             The Ultimate <br />  Web Trading Experience
           </h2>
-          <p className="text-2xl text-[#1C1C1C] mt-4 font-medium">
+          <p className="text-lg sm:text-xl md:text-2xl text-[#1C1C1C] mt-4 font-medium">
             Enjoy Bitzaro right from your desktop
           </p>
-          <button className="mt-12 px-14 py-3 bg-[#7815F9] text-white font-semibold rounded-md font-poppins">
+          <button className="mt-4 md:mt-8 lg:mt-12 px-14 py-3 bg-[#7815F9] text-white font-semibold rounded-md font-poppins">
             Launch on Desktop
           </button>
           <img
@@ -97,14 +97,14 @@ export const Landing = () => {
       <section className="w-full px-4">
         <div className="max-w-[1200px] mx-auto py-16">
           <div className="flex gap-4 items-start">
-            <h2 className="text-5xl font-extrabold pb-16 text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold pb-16 text-left">
               If you'd invested in <span className="underline">Bitcoin</span>
             </h2>
-            <img src={downArrow} alt="" className="mt-8 w-6 h-4 my-4" />
+            <img src={downArrow} alt="" className="mt-4 -ml-2 sm:mt-6 w-4 h-2 my-2  md:mt-8 md:w-6 md:h-4 md:my-4" />
           </div>
 
           <BitcoinInvestmentSection />
-          <p className="text-sm text-gray-500 mt-4 text-center">
+          <p className="text-xs sm:text-sm text-gray-500 mt-4 text-center">
             Based on data from 1 March 2020 - 1 March 2024. Past performances do
             not guarantee the future.
           </p>
@@ -114,7 +114,7 @@ export const Landing = () => {
       {/* Safety & Investment */}
       <section className="w-full bg-white">
         <div className="max-w-[1200px] mx-auto py-16 px-4">
-          <h2 className="text-5xl font-extrabold mt-12 pb-14">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mt-12 pb-14">
             Your Safety, Our Priority
           </h2>
           <InvestmentInfoSection />
@@ -125,7 +125,7 @@ export const Landing = () => {
       {/* Crypto Insights - background */}
       <section className="w-full">
         <div className="max-w-[1200px] mx-auto text-center py-16 px-4">
-          <h2 className="text-5xl font-extrabold text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-left">
             Crypto Latest Insights
           </h2>
           <CryptoInsightsSection />

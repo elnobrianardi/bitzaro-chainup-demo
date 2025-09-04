@@ -38,7 +38,7 @@ export const InsightsSectionDark = () => {
           src={bitzaroLogoBlack}
         />
 
-        <address className="font-medium text-[#F5F7FA] text-sm leading-[21px] not-italic text-center md:text-left">
+        <address className="font-medium text-[#F5F7FA] text-xs sm:text-sm leading-[21px] not-italic text-center md:text-left">
           Room 1046, 14/F, Solo Building
           <br />
           41–43 Carnarvon Road, Tsim Sha Tsui
@@ -46,7 +46,7 @@ export const InsightsSectionDark = () => {
           Kowloon, Hong Kong
         </address>
 
-        <button className="w-fit self-center md:self-start px-4 py-2 bg-[#7815F9] rounded-md text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
+        <button className="w-fit self-center md:self-start px-4 py-2 bg-[#7815F9] rounded-md text-white text-xs sm:text-sm font-medium hover:bg-opacity-90 transition-colors">
           Download Bitzaro App
         </button>
       </div>
@@ -59,7 +59,7 @@ export const InsightsSectionDark = () => {
             className="flex flex-col gap-6"
             aria-label={`${section} navigation`}
           >
-            <h3 className="text-[#83888F] text-sm font-medium uppercase">
+            <h3 className="text-[#83888F] text-xs sm:text-sm font-medium uppercase">
               {section}
             </h3>
             <ul className="flex flex-col gap-4">
@@ -67,7 +67,7 @@ export const InsightsSectionDark = () => {
                 <li key={index}>
                   <a
                     href={item.href}
-                    className="text-[#F5F7FA] text-sm font-medium hover:text-[#7815f9] transition-colors"
+                    className="text-[#F5F7FA] text-xs sm:text-sm font-medium hover:text-[#7815f9] transition-colors"
                   >
                     {item.name}
                   </a>

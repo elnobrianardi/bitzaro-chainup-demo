@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import bitzaroLogoWhite from "../assets/Logo/BitzaroLogoWhite.png";
+import bitzaroLogoWhite from "../assets/Logo/BitzaroLogoWhite.svg";
 import languageWhite from "../assets/Icon/mynaui_globe-1.png";
 import { Menu, X } from "lucide-react";
 
@@ -14,7 +14,7 @@ export const NavigationSection = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-[#16121f] backdrop-blur-[5px] z-50 pt-6 pb-4 px-4">
+    <header className="fixed top-0 left-0 w-full bg-[#16121f] backdrop-blur-[5px] z-50 py-4">
       <div className="max-w-[1200px] w-full mx-auto flex justify-between">
         {/* Left group */}
         <div className="flex gap-6">

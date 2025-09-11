@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import bitzaroLogoWhite from "../assets/Logo/BitzaroLogoWhite.png";
-import bitzaroLogoBlack from "../assets/Logo/BitzaroLogoBlack.png";
+import bitzaroLogoWhite from "../assets/Logo/BitzaroLogoWhite.svg";
+import bitzaroLogoBlack from "../assets/Logo/BitzaroLogoBlack.svg";
 import languagePurple from "../assets/Icon/Your Safety, Our Priority/language.svg";
 import languageWhite from "../assets/Icon/Your Safety, Our Priority/language1.svg";
 import { Menu, X } from "lucide-react";
@@ -33,7 +33,7 @@ export const HeaderSection = () => {
         scrolled
           ? "bg-white/70 backdrop-blur-[12px] border-b-1 border-[#EFF4F9]"
           : "bg-[#16121f]"
-      } py-6`}
+      } py-4`}
     >
       <div className="max-w-[1200px] w-full mx-auto flex justify-between px-4">
         {/* Left group */}
@@ -41,7 +41,7 @@ export const HeaderSection = () => {
           <div className="flex">
             <Link to="/">
               <img
-                className="h-6 object-contain"
+                className="h-6 w-[122px] object-contain"
                 alt="Bitzaro logo"
                 src={scrolled ? bitzaroLogoBlack : bitzaroLogoWhite}
               />

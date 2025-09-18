@@ -39,28 +39,35 @@ export const IntroductionSection = () => {
             </Link>
           </div>
 
-          {/* Phone Mockup with its own gradient */}
+          {/* Phone Mockup with Perfectly Aligned Gradient */}
           <div className="flex-1 flex justify-center md:justify-end relative">
-            {/* Phone Image */}
-            <img
-              src={phoneMockUp}
-              alt="Mobile phones showing crypto trading interface"
-              className="relative z-10 w-[280px] md:w-[400px] lg:w-[583px] h-auto object-contain"
-            />
-            {/* Bottom Gradient Overlay (Desktop) */}
-            <div
-              className="absolute hidden md:block bottom-0 w-full h-2/3 
-             bg-gradient-to-t from-[#121126] to-transparent 
-             z-20 pointer-events-none"
-            />
-            <div
-              className="absolute hidden md:block bottom-0 w-full h-1/8
-             bg-gradient-to-t from-[#121126] to-[#121126]/5
-             z-30 pointer-events-none"
-            />
+            <div className="relative w-[280px] md:w-[400px] lg:w-[583px]">
+              {/* Phone Image */}
+              <img
+                src={phoneMockUp}
+                alt="Mobile phones showing crypto trading interface"
+                className="relative z-10 w-full h-auto object-contain block"
+              />
 
-            {/* Bottom Gradient Overlay (in front of phone bottom for small screen)
-            <div className="absolute md:hidden block bottom-5 w-full h-1/5 bg-gradient-to-t from-[#161220] via-[#161220]/95 to-transparent z-20 pointer-events-none" /> */}
+              {/* Gradient following the phone shape */}
+              <div
+                className="absolute inset-0 z-20 pointer-events-none"
+                style={{
+                  WebkitMaskImage: `url(${phoneMockUp})`,
+                  WebkitMaskRepeat: "no-repeat",
+                  WebkitMaskSize: "contain",
+                  WebkitMaskPosition: "center bottom",
+                  maskImage: `url(${phoneMockUp})`,
+                  maskRepeat: "no-repeat",
+                  maskSize: "contain",
+                  maskPosition: "center bottom",
+                  background: "linear-gradient(to top, #121126 15%, transparent 85%)",
+                  opacity: 0.96,
+                  transform: "translateY(1px) scale(1.01)", 
+                  filter: "blur(2px)",
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>

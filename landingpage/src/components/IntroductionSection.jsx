@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const IntroductionSection = () => {
   return (
-    <section className="relative w-full min-h-[110vh] pt-30 bg-[#16121f] overflow-hidden">
+    <section className="relative w-full min-h-[110vh] pt-15 md:pt-30 bg-[#16121f] overflow-hidden">
       {/* Background Image */}
       <img
         src={heroSection}

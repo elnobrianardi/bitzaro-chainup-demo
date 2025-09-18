@@ -62,7 +62,7 @@ export const IntroductionSection = () => {
                   maskSize: "contain",
                   maskPosition: "center bottom",
                   background: "linear-gradient(to top, #121126 15%, transparent 85%)",
-                  opacity: 0.96,
+                  opacity: 0.90,
                   transform: "translateY(1px) scale(1.01)", 
                   filter: "blur(2px)",
                 }}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import bitzaroLogoWhite from "../assets/Logo/Bitzaro_Logo_RGB_CL_Hor_Rev 3.png";
-import bitzaroLogoBlack from "../assets/Logo/BitzaroLogoBlack.svg";
+import bitzaroLogoBlack from "../assets/Logo/Bitzaro_Logo_RGB_CL_Hor 1.png";
 import languagePurple from "../assets/Icon/Your Safety, Our Priority/language.svg";
 import languageWhite from "../assets/Icon/Your Safety, Our Priority/language1.svg";
 import { Menu, X } from "lucide-react";

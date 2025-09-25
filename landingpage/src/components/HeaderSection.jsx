@@ -41,9 +41,13 @@ export const HeaderSection = () => {
           <div className="flex">
             <Link to="/">
               <img
-                className="h-6 w-[122px] object-contain"
+                className="h-[24px] w-auto"
                 alt="Bitzaro logo"
                 src={scrolled ? bitzaroLogoBlack : bitzaroLogoWhite}
+                style={{
+                  imageRendering: "crisp-edges",
+                  WebkitTransform: "translateZ(0)",
+                }}
               />
             </Link>
           </div>

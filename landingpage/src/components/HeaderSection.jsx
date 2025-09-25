@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import bitzaroLogoWhite from "../assets/Logo/BitzaroLogoWhite.svg";
+import bitzaroLogoWhite from "../assets/Logo/Bitzaro_Logo_RGB_CL_Hor_Rev 3.png";
 import bitzaroLogoBlack from "../assets/Logo/BitzaroLogoBlack.svg";
 import languagePurple from "../assets/Icon/Your Safety, Our Priority/language.svg";
 import languageWhite from "../assets/Icon/Your Safety, Our Priority/language1.svg";
@@ -41,13 +41,9 @@ export const HeaderSection = () => {
           <div className="flex">
             <Link to="/">
               <img
-                className="h-[24px] w-auto"
+                className="h-6 w-[122px] object-contain"
                 alt="Bitzaro logo"
                 src={scrolled ? bitzaroLogoBlack : bitzaroLogoWhite}
-                style={{
-                  imageRendering: "crisp-edges",
-                  WebkitTransform: "translateZ(0)",
-                }}
               />
             </Link>
           </div>
